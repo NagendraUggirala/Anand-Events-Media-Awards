@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { useMultiFormModal } from "../context/ModalContext";
-import RealEstateForm from "../pages/Landinformation";
+import { Link } from "react-router-dom";
+import { navLinks } from "../config/navLinks";
+import NavItem from "./NavItem";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
-  const { openModal } = useMultiFormModal();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 30);
@@ -15,17 +13,7 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems = [
-    { path: "/", label: "Home" },
-    { path: "/about", label: "About" },
-    { path: "/projects", label: "Projects" },
-    { path: "/contact", label: "Contact" },
-  ];
-
-  const isActiveLink = (path) => location.pathname === path;
-
-  const handleLandInfoClick = () => {
-    openModal(<RealEstateForm />);
+  const handleNavClick = () => {
     setIsMenuOpen(false);
   };
 
@@ -57,7 +45,7 @@ const Header = () => {
                 />
                 <div className="flex flex-col items-start">
                   <h1 className="text-lg md:text-xl font-bold text-blue-800">
-                    <span className="text-orange-500">ANAND </span>REALTYY
+                    <span className="text-orange-500">ANAND </span>EVENTS, MEDIA, AWARDS
                   </h1>
                   <p className="text-xs text-gray-600 italic mt-1">
                     "Dharmo Rakshati Rakshitah"
@@ -69,28 +57,14 @@ const Header = () => {
 
           {/* Desktop Navigation - Increased Size */}
           <nav className="hidden lg:flex items-center space-x-3">
-            {navItems.map((item) => (
-              <Link
+            {navLinks.map((item) => (
+              <NavItem
                 key={item.path}
-                to={item.path}
-                className={`px-4 py-2.5 rounded-lg text-base font-semibold transition-all duration-200 ${
-                  isActiveLink(item.path)
-                    ? "text-blue-700 bg-blue-100 border border-blue-200"
-                    : "text-blue-800 hover:bg-blue-50 hover:text-blue-700"
-                }`}
-              >
-                {item.label}
-              </Link>
+                label={item.label}
+                path={item.path}
+                variant="desktop"
+              />
             ))}
-
-            {/* Land Information Button - Increased Size */}
-            <button
-              onClick={handleLandInfoClick}
-              className="px-6 py-3 rounded-lg text-base font-semibold bg-gradient-to-r from-green-600 to-green-700 text-white hover:from-green-700 hover:to-green-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center space-x-2"
-            >
-              <span className="text-lg">📄</span>
-              <span>Land Information Form</span>
-            </button>
           </nav>
 
           {/* Mobile menu button - Improved Size */}
@@ -134,29 +108,15 @@ const Header = () => {
         {isMenuOpen && (
           <div className="lg:hidden border-t border-gray-200 pb-4">
             <nav className="space-y-2 pt-3">
-              {navItems.map((item) => (
-                <Link
+              {navLinks.map((item) => (
+                <NavItem
                   key={item.path}
-                  to={item.path}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`block px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 ${
-                    isActiveLink(item.path)
-                      ? "bg-blue-100 text-blue-700 border border-blue-200"
-                      : "text-blue-800 hover:bg-blue-50 hover:text-blue-700"
-                  }`}
-                >
-                  {item.label}
-                </Link>
+                  label={item.label}
+                  path={item.path}
+                  onClick={handleNavClick}
+                  variant="mobile"
+                />
               ))}
-
-              {/* Mobile Land Info Button */}
-              <button
-                onClick={handleLandInfoClick}
-                className="w-full text-left px-4 py-3 bg-gradient-to-r from-green-600 to-green-700 text-white text-base font-semibold rounded-lg mt-2 hover:from-green-700 hover:to-green-800 transition-all duration-300 flex items-center space-x-2"
-              >
-                <span className="text-lg">📄</span>
-                <span>Land Information Form</span>
-              </button>
             </nav>
           </div>
         )}

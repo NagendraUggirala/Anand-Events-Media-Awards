@@ -8,13 +8,21 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ContactPage from './pages/ContactPage';
-import Landinformation from './pages/Landinformation';
+import EventsPage from './pages/EventsPage';
+import MediaPage from './pages/MediaPage';
+import AwardsPage from './pages/AwardsPage';
+
 import ScrollToTop from './components/ScrollToTop'; // Import the ScrollToTop component
 
 function App() {
   return (
     <ModalProvider> {/* Wrap everything with ModalProvider */}
-      <Router>
+      <Router
+        future={{
+          v7_startTransition: true,
+          v7_relativeSplatPath: true,
+        }}
+      >
         <div className="min-h-screen bg-white">
           <ScrollToTop /> {/* Add ScrollToTop component here */}
           <Header />
@@ -24,7 +32,9 @@ function App() {
               <Route path="/about" element={<AboutPage />} />
               <Route path="/projects" element={<ProjectsPage />} />
               <Route path="/contact" element={<ContactPage />} />
-              <Route path="/Landinfo" element={<Landinformation />} />
+              <Route path="/events" element={<EventsPage />} />
+              <Route path="/media" element={<MediaPage />} />
+              <Route path="/awards" element={<AwardsPage />} />
             </Routes>
           </main>
           <Footer />

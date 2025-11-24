@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useMultiFormModal } from "../context/ModalContext";
-import Landinformation from "../pages/Landinformation";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const { openModal } = useMultiFormModal();
   const [activeModal, setActiveModal] = useState(null);
 
   const quickLinks = [
@@ -14,11 +11,6 @@ const Footer = () => {
     { path: "/projects", label: "Projects" },
     { path: "/contact", label: "Contact" }
   ];
-
-  const handleLandInfoClick = (e) => {
-    e.preventDefault();
-    openModal(<Landinformation />);
-  };
 
   const openLegalModal = (type) => {
     setActiveModal(type);
@@ -191,12 +183,12 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="bg-gradient-to-b from-gray-900 to-[#081526] text-white">
+      <footer className="bg-gradient-to-b from-blue-900 to-[#093a7a] text-white">
         <div className="container mx-auto px-6">
           
           {/* Main Footer Content */}
           <div className="py-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <div className=" grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
               
               {/* Company Info */}
               <div className="text-left">
@@ -221,7 +213,7 @@ const Footer = () => {
                   <div className="text-left">
                     <h2 className="text-2xl font-bold">
                       <span className="text-orange-400">ANAND</span> 
-                      <span className="text-white"> Realtyy</span>
+                      <span className="text-white"> EVENTS, MEDIA, AWARDS</span>
                     </h2>
                     <p className="text-orange-200 text-sm italic">"Dharmo Rakshati Rakshitah"</p>
                   </div>
@@ -236,6 +228,7 @@ const Footer = () => {
                   </p>
                 </div>
 
+               
                 {/* Social Media with SVG Icons */}
                 <div className="flex space-x-3">
                   {[
@@ -257,10 +250,11 @@ const Footer = () => {
                     </a>
                   ))}
                 </div>
+             
               </div>
 
               {/* Quick Links */}
-              <div className="text-left">
+              <div className="text-left pl-20">
                 <h3 className="text-lg font-semibold mb-3 text-orange-400">Quick Links</h3>
                 <div className="space-y-2">
                   {quickLinks.map((link, index) => (
@@ -272,13 +266,6 @@ const Footer = () => {
                       {link.label}
                     </Link>
                   ))}
-                  {/* Land Information as modal trigger */}
-                  <button
-                    onClick={handleLandInfoClick}
-                    className="block text-gray-300 py-1 text-sm hover:text-orange-400 transition-all duration-200 w-full text-left"
-                  >
-                    Land Information Form
-                  </button>
                 </div>
               </div>
 
@@ -303,7 +290,7 @@ const Footer = () => {
 
                     <div className="flex items-center space-x-2">
                       <i className="fas fa-envelope text-orange-400 text-sm" />
-                      <span className="text-gray-300">info@anandrealty.com</span>
+                      <span className="text-gray-300">info@anandeventsmediaawards.com</span>
                     </div>
                   </div>
                 </div>
@@ -318,7 +305,7 @@ const Footer = () => {
               {/* Copyright */}
               <div className="text-center md:text-left">
                 <p className="text-gray-400 text-sm">
-                  © {currentYear} <span className="text-orange-400 font-semibold">Anand Realtyy</span>. All rights reserved.
+                  © {currentYear} <span className="text-orange-400 font-semibold">Anand Events, Media, Awards</span>. All rights reserved.
                 </p>
               </div>
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Icon } from '../components/Icons';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -286,7 +287,7 @@ const Projects = () => {
       name: "International Airport",
       description: "Plots within 10km radius of international airport",
       projects: getProjectCountForArea("airport"),
-      icon: "✈️",
+      icon: "airplane",
       filter: "airport"
     },
     {
@@ -302,7 +303,7 @@ const Projects = () => {
       name: "Major Exhibition Centers",
       description: "Strategic locations near business and exhibition hubs",
       projects: getProjectCountForArea("exhibition"),
-      icon: "🏛️",
+      icon: "building",
       filter: "exhibition"
     },
     {
@@ -310,7 +311,7 @@ const Projects = () => {
       name: "Shopping Malls",
       description: "Commercial plots in retail and shopping districts",
       projects: getProjectCountForArea("mall"),
-      icon: "🛍️",
+      icon: "shopping",
       filter: "mall"
     },
     {
@@ -318,7 +319,7 @@ const Projects = () => {
       name: "Educational Institutions",
       description: "Plots near universities and colleges",
       projects: getProjectCountForArea("university"),
-      icon: "🎓",
+      icon: "graduation",
       filter: "university"
     },
     {
@@ -439,7 +440,7 @@ const Projects = () => {
           >
             <div className="bg-white border-l-4 border-orange-500 text-orange-700 p-4 rounded-lg shadow-lg">
               <div className="flex items-center">
-                <div className="text-orange-500 mr-3">⚠️</div>
+                <Icon name="warning" className="w-6 h-6 text-orange-500 mr-3" />
                 <div className="flex-1">
                   <p className="text-sm font-medium">{toastMessage}</p>
                 </div>
@@ -536,7 +537,9 @@ const Projects = () => {
                 }`}
                 onClick={() => handleNearbyAreaClick(area)}
               >
-                <div className="text-4xl mb-4">{area.icon}</div>
+                <div className="mb-4 flex justify-center">
+                  <Icon name={area.icon} className="w-12 h-12 text-blue-600" />
+                </div>
                 <h3 className="text-xl font-semibold text-blue-800 mb-2">{area.name}</h3>
                 <p className="text-blue-700 mb-4">{area.description}</p>
                 <div className="text-cyan-600 font-semibold flex items-center justify-between">
@@ -700,7 +703,9 @@ const Projects = () => {
                 animate={{ opacity: 1 }}
                 className="text-center py-12"
               >
-                <div className="text-6xl mb-4 text-blue-400">🏗️</div>
+                <div className="mb-4 flex justify-center">
+                  <Icon name="construction" className="w-16 h-16 text-blue-400" />
+                </div>
                 <h3 className="text-2xl font-bold text-blue-800 mb-2">
                   {landmarkFilter 
                     ? `No Plots Available Near ${landmarkFilter.name}`
@@ -743,12 +748,12 @@ const Projects = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
-                  icon: "📜",
+                  icon: "document",
                   title: "100% Legal Clearance",
                   description: "All plots come with clear titles, approved layouts, and complete legal documentation"
                 },
                 {
-                  icon: "🧘",
+                  icon: "meditation",
                   title: "Vastu Compliant",
                   description: "Scientific Vastu principles ensure positive energy flow and prosperous living"
                 },
@@ -758,12 +763,12 @@ const Projects = () => {
                   description: "Strategic locations and premium infrastructure ensure excellent appreciation"
                 },
                 {
-                  icon: "🏗️",
+                  icon: "construction",
                   title: "Ready Infrastructure",
                   description: "All basic amenities including roads, water, electricity, and drainage provided"
                 },
                 {
-                  icon: "🛡️",
+                  icon: "shield",
                   title: "Investment Security",
                   description: "Bank approved projects with transparent pricing and flexible payment options"
                 },
@@ -781,7 +786,9 @@ const Projects = () => {
                   viewport={{ once: true }}
                   className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-md text-center border border-blue-100"
                 >
-                  <div className="text-4xl mb-4">{feature.icon}</div>
+                  <div className="mb-4 flex justify-center">
+                    <Icon name={feature.icon} className="w-12 h-12 text-blue-600" />
+                  </div>
                   <h3 className="text-xl font-semibold text-blue-800 mb-3">{feature.title}</h3>
                   <p className="text-blue-700">{feature.description}</p>
                 </motion.div>

@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Icon } from '../components/Icons';
 
 const About = () => {
   const ref1 = useRef(null);
@@ -17,28 +18,7 @@ const About = () => {
     { year: "2025", title: "Innovation", description: "Launched future-ready real estate solutions" }
   ];
 
-  const values = [
-    {
-      icon: "🤝",
-      title: "Trust & Transparency",
-      description: "Complete legal documentation and honest communication in every transaction"
-    },
-    {
-      icon: "⭐",
-      title: "Quality Excellence",
-      description: "Uncompromised construction standards using premium materials and techniques"
-    },
-    {
-      icon: "⚖️",
-      title: "Vastu Science",
-      description: "Modern architecture harmonized with scientific Vastu principles for balanced living"
-    },
-    {
-      icon: "🌍",
-      title: "Accessible Luxury",
-      description: "Premium living experiences made accessible to everyone without compromise"
-    }
-  ];
+
 
   const sectors = [
     {
@@ -94,6 +74,48 @@ const About = () => {
       }
     }
   };
+  const cards = [
+    {
+      title: "Film & Entertainment Events",
+      body: "Premieres, music launches, fan meets, award nights and red-carpet experiences crafted to highlight films, artists and entertainment brands in the most impactful way.",
+    },
+    {
+      title: "Special Occasions & Premium Events",
+      body: "Curated high-end celebrations such as milestone parties, luxury receptions, VIP galas and exclusive experiences with refined décor, ambience and guest handling.",
+    },
+    {
+      title: "Corporate & Brand Events",
+      body: "Product launches, conferences, dealer meets, team engagements and brand showcases designed to communicate clearly, build trust and strengthen brand presence.",
+    },
+  ];
+  const mediaCards = [
+    {
+      title: "Satellite Channel Programs",
+      body: "Curated TV shows, special segments and branded content created for satellite channels, delivering engaging stories, interviews and entertainment to wide audiences.",
+    },
+    {
+      title: "Podcast Series",
+      body: "Concept-to-release podcast production including scripting, recording and post-production for talk shows, interviews, storytelling and knowledge-driven audio content.",
+    },
+    {
+      title: "Motivational & Social Impact Content",
+      body: "Inspiring video and audio content focused on personal growth, social awareness and community impact, designed to influence minds and create positive change.",
+    },
+  ];
+  const awardsContent = [
+    {
+      title: "Our Purpose",
+      body: "To recognize and celebrate outstanding talent in events, media and entertainment, inspiring creators to push boundaries and set new benchmarks of excellence.",
+    },
+    {
+      title: "Award Categories",
+      body: "Well-defined categories across events, media, performances and technical excellence, ensuring every creative contribution finds the right space to be appreciated.",
+    },
+    {
+      title: "Award Ceremony Highlights",
+      body: "A premium red-carpet experience with live performances, celebrity appearances, curated presentations and memorable moments that honor the winners in style.",
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-gray-50 overflow-x-hidden">
@@ -105,7 +127,7 @@ const About = () => {
           <div className="absolute -right-24 -bottom-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-yellow-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
         </div>
-        
+
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -125,15 +147,15 @@ const About = () => {
                 <div className="text-2xl sm:text-3xl md:text-5xl font-bold text-yellow-300 mb-4 md:mb-5 font-sans leading-tight">
                   धर्मो रक्षति रक्षितः
                 </div>
-                
+
                 {/* Transliteration */}
                 <div className="text-base sm:text-lg md:text-2xl text-blue-100 italic mb-4 md:mb-5">
                   "Dharmo Rakshati Rakshitah"
                 </div>
-                
+
                 {/* Separator */}
                 <div className="w-16 h-1 bg-gradient-to-r from-yellow-400 to-orange-400 mx-auto rounded-full mb-4 md:mb-5"></div>
-                
+
                 {/* Meaning */}
                 <div className="text-sm sm:text-base md:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed px-2">
                   Where righteousness protects the protector, and ethical practices build lasting legacies.
@@ -159,7 +181,7 @@ const About = () => {
               className="max-w-4xl mx-auto"
             >
               <p className="text-sm sm:text-base md:text-lg text-blue-100 leading-relaxed px-2 sm:px-4">
-                For over two decades, we've built not just properties, but trust. Our journey is guided by 
+                For over two decades, we've built not just properties, but trust. Our journey is guided by
                 the timeless wisdom that when you protect Dharma (righteousness), Dharma protects you in return.
               </p>
             </motion.div>
@@ -172,7 +194,7 @@ const About = () => {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-start">
-              
+
               {/* Left: Image card with responsive sizing */}
               <motion.div
                 initial={{ opacity: 0, x: -40 }}
@@ -189,7 +211,7 @@ const About = () => {
                       alt="Founder & Chairman"
                       className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                     />
-                    
+
                     {/* Shine effect on hover */}
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
 
@@ -218,10 +240,7 @@ const About = () => {
                   >
                     <div className="bg-gradient-to-r from-blue-50/50 to-orange-50/50 rounded-xl p-4 md:p-6 border-l-4 border-orange-500 shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:border-orange-600 mx-2 sm:mx-0">
                       <p className="text-gray-700 italic text-sm sm:text-base md:text-lg leading-relaxed text-center">
-                        "We transform landscapes into legacies. Every plot we develop is backed by 
-                        complete legal documentation, premium amenities, and a vision for sustainable 
-                        community living. Our ventures aren't just investments; they're foundations 
-                        for generations to come."
+                        “We transform creativity into celebration. Every event we curate, every story we produce, and every award we present is backed by integrity, innovation, and a vision to honor true talent. Our platforms aren’t just showcases; they are stages for legends in the making and for inspiration that lasts for generations.”
                       </p>
                     </div>
                   </motion.div>
@@ -251,15 +270,12 @@ const About = () => {
                       Mr. Anand has successfully steered the group through economic cycles, expanding
                       from a single real estate venture to a diversified conglomerate with global presence.
                     </p>
-                    
+
                     {/* Added Realtyy Information */}
                     <div className="bg-blue-50 rounded-lg p-4 md:p-6 mt-4 border-l-4 border-blue-500">
-                      <h4 className="font-bold text-blue-800 text-base sm:text-lg md:text-xl mb-2">About Anand Realtyy</h4>
+                      <h4 className="font-bold text-blue-800 text-base sm:text-lg md:text-xl mb-2">About Anand Events, Media & Awards</h4>
                       <p className="text-gray-700 text-xs sm:text-sm md:text-base">
-                        Under Anand's leadership, Anand Realtyy has emerged as a trusted name in plot development, 
-                        transforming raw land into premium residential ventures. With 25+ years of expertise, 
-                        we specialize in creating sustainable, Vastu-compliant plotted communities that offer 
-                        complete legal transparency and exceptional value appreciation.
+                        At Anand Events Media Awards, we believe that creativity has the power to inspire, entertain, and bring people together. Our platform is dedicated to celebrating excellence across the Events, Media, and Entertainment industries — honoring the talent and innovation that shape the world of visual storytelling and exceptional experiences.
                       </p>
                     </div>
                   </div>
@@ -297,191 +313,223 @@ const About = () => {
           >
             <motion.div variants={itemVariants} className="text-center mb-12 md:mb-16">
               <h2 className="text-2xl md:text-4xl font-bold text-blue-800 mb-4 md:mb-6">
-                About Anand Realtyy
+                About Anand Events, Media & Awards
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-2 sm:px-4">
-                Transforming raw land into premium residential plots with 25+ years of expertise
+                Celebrating excellence in events, media, and creative entertainment.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 items-stretch px-2 sm:px-0">
-              <motion.div variants={itemVariants} className="flex">
-                <div className="bg-gradient-to-br from-blue-50 to-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border border-blue-100 hover:shadow-xl hover:border-blue-200 transition-all duration-300 flex flex-col h-full w-full">
-                  <div className="flex flex-col h-full justify-between">
-                    <div>
-                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-800 mb-4 md:mb-6 text-left">
-                        Plot Development Excellence
-                      </h3>
-                      <div className="space-y-4 text-left">
-                        <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
-                          <span className="font-semibold text-blue-800">
-                            Anand Realtyy specializes in plotted ventures that offer:
-                          </span>{" "}
-                          Complete legal transparency, premium infrastructure, Vastu-compliant layouts, 
-                          and exceptional value appreciation potential for every investor.
-                        </p>
-                        <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
-                          Our plotted communities are designed with modern amenities, green spaces, 
-                          and sustainable features that create ideal living environments while ensuring 
-                          maximum returns on investment.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+            <div className="w-full bg-white-50 px-4 py-12 text-black sm:px-6 lg:px-12">
+              <div className="mx-auto max-w-6xl">
+                {/* Header */}
+                <div className="mb-8 max-w-3xl">
+                  <h3 className="text-2l md:text-4xl font-bold text-blue-800 mb-4 md:mb-6">
+                    Events
+                  </h3>
+                  <h2 className="text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl">
+                    Crafted Experiences for Every Stage
+                  </h2>
+                  <p className="mt-4 text-sm leading-relaxed text-gray-700 sm:text-base">
+                    From film premieres to premium celebrations and corporate showcases, we design event experiences that connect with audiences and create lasting impressions.
+                  </p>
                 </div>
-              </motion.div>
 
-              <motion.div variants={itemVariants} className="flex">
-                <div className="bg-gradient-to-br from-orange-50 to-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border border-orange-100 hover:shadow-xl hover:border-orange-200 transition-all duration-300 flex flex-col h-full w-full">
-                  <div className="flex flex-col h-full justify-between">
-                    <div>
-                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-800 mb-4 md:mb-6 text-left">
-                        Our Evolution in Real Estate
-                      </h3>
-                      <div className="space-y-4 text-left">
-                        <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
-                          What began with single plot developments has now evolved into large-scale 
-                          residential ventures and townships. Yet, our core principles remain unchanged: 
-                          delivering genuine properties with transparent documentation, creating 
-                          infrastructure with uncompromised quality, and offering plotted solutions 
-                          that remain accessible to all investors.
-                        </p>
-                      </div>
+                {/* Cards */}
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                  {cards.map((card, index) => (
+                    <div
+                      key={index}
+                      className="flex flex-col rounded-2xl border border-gray-200 bg-gray-50 p-6 shadow-md transition hover:-translate-y-1 hover:border-yellow-600 hover:shadow-lg"
+                    >
+                      <div className="mb-3 h-1.5 w-12 rounded-full bg-yellow-600/90" />
+                      <h3 className="mb-2 text-lg font-semibold">{card.title}</h3>
+                      <p className="text-sm leading-relaxed text-gray-700">
+                        {card.body}
+                      </p>
                     </div>
-                  </div>
+                  ))}
                 </div>
-              </motion.div>
+              </div>
             </div>
-          </motion.div>
-        </div>
-      </section>
 
-      {/* Values Section - Mobile Optimized */}
-      <section className="py-12 md:py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12 md:mb-16"
-          >
-            <h2 className="text-2xl md:text-4xl font-bold text-blue-800 mb-4 md:mb-6">
-              Our Guiding Principles
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-2 sm:px-4">
-              The values that define our approach and differentiate us in the market
-            </p>
-          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto px-2 sm:px-0">
-            {values.map((value, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.08 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -4, scale: 1.02 }}
-                className="bg-white rounded-xl shadow-lg p-4 md:p-6 text-center group hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200"
-              >
-                <div className="text-3xl sm:text-4xl md:text-5xl mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {value.icon}
+            <div className="w-full bg-white-50 px-4 py-12 text-black sm:px-6 lg:px-12">
+              <div className="mx-auto max-w-6xl">
+
+                {/* Header */}
+                <div className="mb-8 max-w-3xl">
+                  <h3 className="text-2l md:text-4xl font-bold text-blue-800 mb-4 md:mb-6">
+                    Media
+                  </h3>
+                  <h2 className="text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl">
+                    Content That Connects & Inspires
+                  </h2>
+                  <p className="mt-4 text-sm leading-relaxed text-gray-700 sm:text-base">
+                    From broadcast-ready TV shows to powerful podcasts and impact-driven stories,
+                    we craft media content that informs, engages and inspires diverse audiences.
+                  </p>
                 </div>
-                <h3 className="text-base sm:text-lg md:text-xl font-bold text-blue-800 mb-2 md:mb-3 group-hover:text-blue-600 transition-colors">{value.title}</h3>
-                <p className="text-gray-600 text-xs sm:text-sm leading-relaxed group-hover:text-gray-700 transition-colors">{value.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-      
 
-      {/* Timeline Section - Mobile Optimized */}
-      <section className="py-12 md:py-20 bg-gradient-to-br from-blue-50 to-gray-50">
-        <div className="container mx-auto px-4 sm:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12 md:mb-16"
-          >
-            <h2 className="text-2xl md:text-4xl font-bold text-blue-800 mb-4 md:mb-6">
-              Our Journey
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 px-2 sm:px-4">
-              Milestones that mark our path of growth and excellence
-            </p>
-          </motion.div>
+                {/* Cards */}
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                  {mediaCards.map((mediaItem, index) => (
+                    <div
+                      key={index}
+                      className="flex flex-col rounded-2xl border border-gray-200 bg-gray-50 p-6 shadow-md transition hover:-translate-y-1 hover:border-blue-700 hover:shadow-lg"
+                    >
+                      <div className="mb-3 h-1.5 w-12 rounded-full bg-blue-700/90" />
+                      <h3 className="mb-2 text-lg font-semibold">{mediaItem.title}</h3>
+                      <p className="text-sm leading-relaxed text-gray-700">
+                        {mediaItem.body}
+                      </p>
+                    </div>
+                  ))}
+                </div>
 
-          {/* Improved Mobile Timeline */}
-          <div className="max-w-4xl mx-auto px-2 sm:px-0">
-            {/* Mobile Timeline - Vertical Stack */}
-            <div className="md:hidden space-y-8">
-              {milestones.map((milestone, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.15 }}
-                  viewport={{ once: true }}
-                  className="flex flex-col items-center"
-                >
-                  {/* Year Circle */}
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center text-white font-bold text-base sm:text-lg mb-4 shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300">
-                    {milestone.year}
-                  </div>
-                  
-                  {/* Content Card */}
-                  <div className="bg-white p-4 sm:p-6 rounded-2xl shadow-lg border border-blue-100 w-full text-center hover:shadow-xl hover:border-blue-200 transition-all duration-300 group">
-                    <h3 className="text-lg sm:text-xl font-bold text-blue-800 mb-3 group-hover:text-blue-600 transition-colors">
-                      {milestone.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed group-hover:text-gray-700 transition-colors">
-                      {milestone.description}
+              </div>
+            </div>
+
+            <div className="w-full bg-white-50 px-4 py-12 text-black sm:px-6 lg:px-12">
+              <div className="mx-auto max-w-6xl">
+                {/* Header */}
+                <div className="mb-8 max-w-3xl">
+                  <h3 className="text-2l md:text-4xl font-bold text-blue-800 mb-4 md:mb-6">
+                    Awards
+                  </h3>
+                  <h2 className="text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl">
+                    Celebrating Excellence & Impact
+                  </h2>
+                  <p className="mt-4 text-sm leading-relaxed text-gray-700 sm:text-base">
+                    Anand Events Media Awards is designed to honor visionaries, teams and creators whose work stands out in quality, creativity and impact across the industry.
+                  </p>
+                </div>
+                {/* Cards */}
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                  {awardsContent.map((item, index) => (<div key={index}
+                    className="flex flex-col rounded-2xl border border-gray-200 bg-gray-50 p-6 shadow-md transition hover:-translate-y-1 hover:border-emerald-700 hover:shadow-lg" >
+                    <div className="mb-3 h-1.5 w-12 rounded-full bg-emerald-700/90" />
+                    <h3 className="mb-2 text-lg font-semibold">{item.title}</h3>
+                    <p className="text-sm leading-relaxed text-gray-700">
+                      {item.body}
                     </p>
                   </div>
-                  
-                  {/* Connector Line (except for last item) */}
-                  {index < milestones.length - 1 && (
-                    <div className="w-1 h-6 sm:h-8 bg-blue-200 mt-4 rounded-full"></div>
-                  )}
-                </motion.div>
-              ))}
+                  ))}
+                </div>
+              </div>
             </div>
 
-            {/* Desktop Timeline - Original Design */}
-            <div className="hidden md:block relative">
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-blue-200 h-full top-0"></div>
 
-              {milestones.map((milestone, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.15 }}
-                  viewport={{ once: true }}
-                  className={`flex flex-col md:flex-row items-center mb-8 md:mb-12 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
-                >
-                  <div className={`md:w-5/12 ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>
-                    <div className="bg-white p-4 md:p-6 rounded-xl shadow-lg border border-blue-100 hover:shadow-xl hover:border-blue-200 transition-all duration-300 group">
-                      <h3 className="text-lg md:text-xl font-bold text-blue-800 mb-2 group-hover:text-blue-600 transition-colors">{milestone.title}</h3>
-                      <p className="text-gray-600 text-sm md:text-base group-hover:text-gray-700 transition-colors">{milestone.description}</p>
-                    </div>
-                  </div>
-
-                  <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 md:w-16 md:h-16 bg-orange-500 rounded-full items-center justify-center text-white font-bold z-10 hover:scale-110 hover:bg-orange-600 transition-all duration-300 text-sm md:text-base">
-                    {milestone.year}
-                  </div>
-
-                  <div className="md:w-5/12"></div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
+          </motion.div>
         </div>
       </section>
+
+      <div className="container mx-auto px-4 sm:px-6">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView1 ? "visible" : "hidden"}
+          className="max-w-6xl mx-auto"
+        >
+
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-12 items-stretch px-2 sm:px-0">
+            <motion.div variants={itemVariants} className="flex">
+              <div className="bg-gradient-to-br from-blue-50 to-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border border-blue-100 hover:shadow-xl hover:border-blue-200 transition-all duration-300 flex flex-col h-full w-full">
+                <div className="flex flex-col h-full justify-between">
+                  <div>
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-800 mb-4 md:mb-6 text-left">
+                      Our Vision
+                    </h3>
+                    <div className="space-y-4 text-left">
+                      <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
+                        To become one of the most respected creative award platforms globally —
+                        celebrating imagination, dedication, and achievements that inspire a brighter future.
+
+                      </p>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="flex">
+              <div className="bg-gradient-to-br from-orange-50 to-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border border-orange-100 hover:shadow-xl hover:border-orange-200 transition-all duration-300 flex flex-col h-full w-full">
+                <div className="flex flex-col h-full justify-between">
+                  <div>
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-800 mb-4 md:mb-6 text-left">
+                      Our Mission
+                    </h3>
+                    <div className="space-y-4 text-left">
+                      <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
+                        Empower talented individuals in events & media industries
+
+                        Create opportunities for collaboration and recognition
+
+                        Encourage innovation and world-class creative standards
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
+      </div>
+      <div className="w-full bg-white-50 px-4 py-12 text-black sm:px-6 lg:px-12">
+        <div className="mx-auto max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="rounded-3xl border border-gray-200 bg-gray-50 p-6 shadow-md sm:p-8 lg:p-10"
+          >
+            {/* Heading */}
+            <div className="mb-4">
+
+              <h2 className="mt-2 text-xl font-bold tracking-tight sm:text-2xl lg:text-3xl">
+                Shaping the Future of Creativity & Entertainment
+              </h2>
+            </div>
+
+            {/* Points */}
+            <div className="mt-4 space-y-4 text-sm sm:text-base">
+              <div className="flex items-start gap-3">
+                <span className="mt-1 inline-flex h-2.5 w-2.5 flex-shrink-0 rounded-full bg-purple-700" />
+                <p className="leading-relaxed text-gray-800">
+                  <span className="font-semibold">Empowering Talent</span> – Providing a stage for artists and creators to shine.
+                </p>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <span className="mt-1 inline-flex h-2.5 w-2.5 flex-shrink-0 rounded-full bg-purple-700" />
+                <p className="leading-relaxed text-gray-800">
+                  <span className="font-semibold">Encouraging Innovation</span> – Rewarding bold thinking and superior craftsmanship.
+                </p>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <span className="mt-1 inline-flex h-2.5 w-2.5 flex-shrink-0 rounded-full bg-purple-700" />
+                <p className="leading-relaxed text-gray-800">
+                  <span className="font-semibold">Inspiring Future Leaders</span> – Celebrating role models who inspire the next generation.
+                </p>
+              </div>
+            </div>
+
+            {/* Bottom line */}
+            <div className="mt-6 border-t border-gray-200 pt-4">
+              <p className="text-sm font-medium text-gray-900 sm:text-base">
+                We are not just rewarding achievements —{" "}
+                <span className="text-purple-700">
+                  we are shaping the future of creativity and entertainment.
+                </span>
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </div>
 
       {/* Future Vision - Mobile Optimized */}
       <section ref={ref3} className="py-12 md:py-20 bg-white">
@@ -498,10 +546,7 @@ const About = () => {
               </h2>
               <div className="w-20 h-1 md:w-24 md:h-1 bg-gradient-to-r from-blue-500 to-orange-500 mx-auto mb-6 md:mb-8 rounded-full"></div>
               <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-6 md:mb-8 px-2 sm:px-4">
-                With expanding ventures in plotted developments, township projects, infrastructure, 
-                and several future-ready sectors, Anand Realtyy stands for responsible growth, 
-                transparent operations, and a vision to build assets, experiences, and opportunities 
-                that last for generations.
+                With expanding ventures in events, media productions, award platforms, and future-ready creative experiences, Anand Events Media Awards stands for meaningful impact, transparent operations, and a vision to create moments, stories, and opportunities that inspire generations.
               </p>
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -532,7 +577,7 @@ const About = () => {
               Ready to Be Part of Our Story?
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-blue-200 mb-6 md:mb-8 max-w-2xl mx-auto px-2 sm:px-4">
-              Discover how Anand Realtyy's commitment to quality and trust can transform your real estate dreams into reality.
+              Discover how Anand Events Media Awards’ commitment to creativity and excellence can turn visionary ideas into unforgettable experiences and global recognition.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
               <Link
@@ -565,8 +610,8 @@ function EnhancedStatCard({ title, subtitle, delay = 0 }) {
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.5, delay }}
       viewport={{ once: true }}
-      whileHover={{ 
-        y: -4, 
+      whileHover={{
+        y: -4,
         scale: 1.05,
         transition: { duration: 0.3 }
       }}
@@ -579,7 +624,7 @@ function EnhancedStatCard({ title, subtitle, delay = 0 }) {
         <div className="text-xs text-gray-400 mt-1 group-hover:text-gray-600 transition-colors duration-300">
           {subtitle}
         </div>
-        
+
         {/* Hover effect background */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-orange-50/50 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
       </div>
