@@ -347,7 +347,7 @@ const HomePage = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={heroInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+              className="text-3xl md:text-5xl lg:text-5xl font-bold mb-6 leading-tight"
             >
               Crafting Experiences.
               <br />
@@ -360,7 +360,7 @@ const HomePage = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={heroInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-xl md:text-2xl text-blue-100 mb-10 max-w-3xl mx-auto leading-relaxed"
+              className="text-xl md:text-1xl text-blue-100 mb-10 max-w-3xl mx-auto leading-relaxed"
             >
               A premier platform delivering world-class events, impactful media content, and prestigious award recognition to inspire excellence across industries.
             </motion.p>
