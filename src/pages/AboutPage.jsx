@@ -120,7 +120,7 @@ const About = () => {
   return (
     <div className="min-h-screen bg-gray-50 overflow-x-hidden">
       {/* Enhanced Hero Section with Dharmo Rakshati Rakshitah */}
-      <section className="relative py-16 md:py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 overflow-hidden">
+      <section className="relative py-16 md:py-20 bg-gradient-to-br from-orange-500 via-orange-500 to-blue-700 overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div className="absolute -left-24 -top-20 w-72 h-72 bg-orange-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>

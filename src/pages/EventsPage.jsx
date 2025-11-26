@@ -153,7 +153,7 @@ const EventsPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* 1. Header / Title Section */}
-      <section className="relative py-20 bg-gradient-to-br from-yellow-900 via-green-900 to-indigo-900 text-white overflow-hidden">
+      <section className="relative py-20 bg-gradient-to-br from-yellow-900 via-yellow-900 to-yellow-900 text-white overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-96 h-96 bg-yellow-400 rounded-full blur-3xl"></div>

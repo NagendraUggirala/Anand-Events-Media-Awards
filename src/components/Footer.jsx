@@ -6,18 +6,28 @@ const Footer = () => {
   const [activeModal, setActiveModal] = useState(null);
 
   const quickLinks = [
-    { path: "/", label: "Home" },
-    { path: "/about", label: "About" },
-    { path: "/events", label: "events" },
-    {
-      path: "/awards",
-      label: "awards",
-    }, {
-      path: "/media", label: "Media"
-    },
-    { path: "/contact", label: "Contact" }
-  ];
 
+    { path: "/", label: "Home" },
+
+    { path: "/about", label: "About" },
+
+    { path: "/events", label: "events" },
+
+    {
+
+      path: "/awards",
+
+      label: "awards",
+
+    }, {
+
+      path: "/media", label: "Media"
+
+    },
+
+    { path: "/contact", label: "Contact" }
+
+  ];
   const openLegalModal = (type) => {
     setActiveModal(type);
   };
@@ -66,7 +76,7 @@ const Footer = () => {
             <h4 class="text-lg font-semibold text-blue-800 mb-2">Information We Collect</h4>
             <ul class="list-disc list-inside space-y-1 text-gray-600">
               <li>Personal identification information (Name, email address, phone number)</li>
-              <li>Property preferences and requirements</li>
+              <li>Business information and trade requirements</li>
               <li>Communication history and inquiries</li>
               <li>Site usage data and analytics</li>
             </ul>
@@ -75,16 +85,16 @@ const Footer = () => {
           <div>
             <h4 class="text-lg font-semibold text-blue-800 mb-2">How We Use Your Information</h4>
             <ul class="list-disc list-inside space-y-1 text-gray-600">
-              <li>Provide personalized property recommendations</li>
+              <li>Provide personalized trading solutions and recommendations</li>
               <li>Process your inquiries and service requests</li>
-              <li>Send relevant property updates and market insights</li>
+              <li>Send relevant market updates and trade insights</li>
               <li>Improve our services and customer experience</li>
             </ul>
           </div>
 
           <div>
             <h4 class="text-lg font-semibold text-blue-800 mb-2">Data Protection</h4>
-            <p class="text-gray-600">We implement security measures to protect your personal information and maintain confidentiality in all real estate transactions.</p>
+            <p class="text-gray-600">We implement security measures to protect your personal information and maintain confidentiality in all trade transactions.</p>
           </div>
         </div>
       `
@@ -96,27 +106,27 @@ const Footer = () => {
           <p class="text-gray-700"><strong>Effective Date:</strong> ${currentYear}</p>
           
           <div>
-            <h4 class="text-lg font-semibold text-blue-800 mb-2">Property Information</h4>
+            <h4 class="text-lg font-semibold text-blue-800 mb-2">Product Information</h4>
             <ul class="list-disc list-inside space-y-1 text-gray-600">
-              <li>All property details, prices, and specifications are subject to change without prior notice</li>
-              <li>Images and renderings are for representation purposes only</li>
-              <li>Actual properties may vary from displayed information</li>
+              <li>All product details, prices, and specifications are subject to change without prior notice</li>
+              <li>Images and descriptions are for representation purposes only</li>
+              <li>Actual products may vary from displayed information</li>
             </ul>
           </div>
 
           <div>
-            <h4 class="text-lg font-semibold text-blue-800 mb-2">Booking & Transactions</h4>
+            <h4 class="text-lg font-semibold text-blue-800 mb-2">Orders & Transactions</h4>
             <ul class="list-disc list-inside space-y-1 text-gray-600">
-              <li>Property bookings are subject to availability</li>
-              <li>All transactions must comply with RERA regulations</li>
-              <li>Booking amounts are non-refundable as per policy terms</li>
-              <li>Payment plans are subject to company approval</li>
+              <li>Orders are subject to product availability and supplier confirmation</li>
+              <li>All transactions must comply with international trade regulations</li>
+              <li>Payment terms are subject to company approval and credit verification</li>
+              <li>Shipping and delivery timelines are estimates and may vary</li>
             </ul>
           </div>
 
           <div>
             <h4 class="text-lg font-semibold text-blue-800 mb-2">Legal Compliance</h4>
-            <p class="text-gray-600">All real estate transactions are governed by applicable state laws and RERA regulations. Buyers are advised to verify all documents before proceeding.</p>
+            <p class="text-gray-600">All trade transactions are governed by applicable international trade laws and customs regulations. Clients are advised to verify all documentation before proceeding.</p>
           </div>
         </div>
       `
@@ -127,60 +137,23 @@ const Footer = () => {
         <div class="space-y-4">
           <div>
             <h4 class="text-lg font-semibold text-blue-800 mb-2">Information Accuracy</h4>
-            <p class="text-gray-600">While we strive to provide accurate and up-to-date information about properties and real estate services, we cannot guarantee the completeness or accuracy of all content. Prospective buyers should:</p>
+            <p class="text-gray-600">While we strive to provide accurate and up-to-date information about products and trading services, we cannot guarantee the completeness or accuracy of all content. Clients should:</p>
             <ul class="list-disc list-inside space-y-1 text-gray-600 mt-2">
-              <li>Verify all property details personally</li>
-              <li>Check original documents and approvals</li>
-              <li>Consult legal advisors before transactions</li>
-              <li>Visit project sites for firsthand assessment</li>
+              <li>Verify all product details and specifications</li>
+              <li>Check original documentation and certifications</li>
+              <li>Consult trade advisors before transactions</li>
+              <li>Review samples when available</li>
             </ul>
           </div>
 
           <div>
-            <h4 class="text-lg font-semibold text-blue-800 mb-2">Investment Risks</h4>
-            <p class="text-gray-600">Real estate investments are subject to market risks. Past performance doesn't guarantee future returns. Investors should make independent decisions based on their risk assessment.</p>
+            <h4 class="text-lg font-semibold text-blue-800 mb-2">Trade Risks</h4>
+            <p class="text-gray-600">International trade involves various risks including currency fluctuations, regulatory changes, and market volatility. Clients should make independent decisions based on their risk assessment.</p>
           </div>
 
           <div>
             <h4 class="text-lg font-semibold text-blue-800 mb-2">Third-Party Links</h4>
             <p class="text-gray-600">Our website may contain links to third-party sites. We are not responsible for the content or privacy practices of these external sites.</p>
-          </div>
-        </div>
-      `
-    },
-    RERA: {
-      title: "RERA Compliance",
-      content: `
-        <div class="space-y-4">
-          <div class="bg-green-50 border border-green-200 rounded-lg p-4">
-            <h4 class="text-lg font-semibold text-green-800 mb-2">Registered with RERA</h4>
-            <p class="text-green-700">Anand Realtyy is a registered real estate agent under RERA regulations, ensuring transparency and consumer protection in all our transactions.</p>
-          </div>
-
-          <div>
-            <h4 class="text-lg font-semibold text-blue-800 mb-2">RERA Registration Details</h4>
-            <ul class="list-disc list-inside space-y-1 text-gray-600">
-              <li><strong>Registration Number:</strong> RERA/TS/XXXX/2023</li>
-              <li><strong>Valid Until:</strong> December 31, 2026</li>
-              <li><strong>Jurisdiction:</strong> Telangana State</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="text-lg font-semibold text-blue-800 mb-2">Consumer Protection</h4>
-            <p class="text-gray-600">As per RERA guidelines, we ensure:</p>
-            <ul class="list-disc list-inside space-y-1 text-gray-600 mt-2">
-              <li>Transparent project details and pricing</li>
-              <li>Timely project completion and delivery</li>
-              <li>Escrow account management for customer funds</li>
-              <li>Adherence to approved building plans and specifications</li>
-              <li>Clear title and documentation for all properties</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="text-lg font-semibold text-blue-800 mb-2">Grievance Redressal</h4>
-            <p class="text-gray-600">For any complaints or disputes, customers can contact our grievance officer or approach the RERA authority directly.</p>
           </div>
         </div>
       `
@@ -193,14 +166,14 @@ const Footer = () => {
         <div className="container mx-auto px-6">
 
           {/* Main Footer Content */}
-          <div className="py-8 place-items-center bg-red">
-            <div className=" grid grid-cols-1 md:grid-cols-3  gap-6 mb-6 justify-items-between md:justify-items-start">
+          <div className="py-8">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-4 lg:gap-6 mb-6">
 
               {/* Company Info */}
-              <div className="text-left">
-                <div className="flex items-start space-x-4 mb-4">
+              <div className="text-left md:col-span-4">
+                <div className="flex items-center space-x-3 mb-4">
                   {/* Founder Image and Logo */}
-                  <div className="flex items-center space-x-3">
+                  <div className="flex items-center space-x-2 flex-shrink-0">
                     <div className="w-16 h-16 rounded-full border-2 border-orange-200 overflow-hidden shadow-lg">
                       <img
                         src="/images/image.png"
@@ -211,17 +184,18 @@ const Footer = () => {
                     <div className="w-14 h-14">
                       <img
                         src="/images/Anandhlogo.png"
-                        alt="Anand Realtyy"
+                        alt="AnandEVENTSMEDIAAWARDS"
                         className="w-full h-full object-contain"
                       />
                     </div>
                   </div>
-                  <div className="text-left">
-                    <h2 className="text-2xl font-bold">
+                  {/* Text immediately to the side */}
+                  <div className="flex flex-col">
+                    <h2 className="text-xl md:text-2xl font-bold">
                       <span className="text-orange-400">ANAND</span>
                       <span className="text-white"> EVENTS, MEDIA, AWARDS</span>
                     </h2>
-                    <p className="text-orange-200 text-sm italic">"Dharmo Rakshati Rakshitah"</p>
+                    <p className="text-orange-200 text-xs md:text-sm italic">"Dharmo Rakshati Rakshitah"</p>
                   </div>
                 </div>
 
@@ -233,35 +207,10 @@ const Footer = () => {
                     Creating sustainable, Vastu-compliant plotted communities with complete legal transparency.
                   </p>
                 </div>
-
-
-                {/* Social Media with SVG Icons */}
-                <div className="flex space-x-3">
-                  {[
-                    { name: "facebook", url: "#", color: "hover:bg-blue-600" },
-                    { name: "twitter", url: "#", color: "hover:bg-blue-400" },
-                    { name: "instagram", url: "#", color: "hover:bg-pink-600" },
-                    { name: "youtube", url: "#", color: "hover:bg-red-600" },
-                    { name: "linkedin", url: "#", color: "hover:bg-blue-800" }
-                  ].map((social, i) => (
-                    <a
-                      key={i}
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-white transition-all duration-300 hover:scale-110 ${social.color}`}
-                      title={social.name.charAt(0).toUpperCase() + social.name.slice(1)}
-                    >
-                      {SocialIcons[social.name]}
-                    </a>
-                  ))}
-                </div>
-
               </div>
 
               {/* Quick Links */}
-              <div className="text-left">
-                
+              <div className="text-left md:col-span-2 md:pl-6">
                 <h3 className="text-lg font-semibold mb-3 text-orange-400">Quick Links</h3>
                 <div className="space-y-2">
                   {quickLinks.map((link, index) => (
@@ -277,7 +226,7 @@ const Footer = () => {
               </div>
 
               {/* Contact Info */}
-              <div className="text-left">
+              <div className="text-left md:col-span-3 md:pl-4">
                 <h3 className="text-lg font-semibold mb-3 text-orange-400">Contact</h3>
                 <div className="space-y-3 text-sm">
                   <div className="flex flex-col items-start space-y-2">
@@ -302,6 +251,31 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
+
+              {/* Follow Us Section */}
+              <div className="text-left md:col-span-3 md:pl-4">
+                <h3 className="text-lg font-semibold mb-3 text-orange-400">Follow Us</h3>
+                <div className="flex flex-wrap gap-3">
+                  {[
+                    { name: "facebook", url: "#", color: "hover:bg-blue-600" },
+                    { name: "twitter", url: "#", color: "hover:bg-blue-400" },
+                    { name: "instagram", url: "#", color: "hover:bg-pink-600" },
+                    { name: "youtube", url: "#", color: "hover:bg-red-600" },
+                    { name: "linkedin", url: "#", color: "hover:bg-blue-800" }
+                  ].map((social, i) => (
+                    <a
+                      key={i}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-white transition-all duration-300 hover:scale-110 ${social.color}`}
+                      title={social.name.charAt(0).toUpperCase() + social.name.slice(1)}
+                    >
+                      {SocialIcons[social.name]}
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
 
@@ -318,7 +292,7 @@ const Footer = () => {
 
               {/* Legal Links */}
               <div className="flex flex-wrap justify-center gap-4">
-                {["Privacy", "Terms", "Disclaimer", "RERA"].map((item) => (
+                {["Privacy", "Terms", "Disclaimer"].map((item) => (
                   <button
                     key={item}
                     onClick={() => openLegalModal(item)}

@@ -139,7 +139,7 @@ const AwardsPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* 1. Header / Title Section - Premium Gold Theme */}
-      <section className="relative py-20 bg-gradient-to-br from-yellow-900 via-amber-900 to-orange-900 text-white overflow-hidden">
+      <section className="relative py-20 bg-gradient-to-br from-green-500 via-green-900 to-green-600 text-white overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-0 w-96 h-96 bg-yellow-400 rounded-full blur-3xl"></div>
