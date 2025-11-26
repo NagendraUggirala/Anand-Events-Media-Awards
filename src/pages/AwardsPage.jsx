@@ -439,7 +439,7 @@ const AwardsPage = () => {
       </section>
 
       {/* 7. Closing CTA */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-yellow-900 via-amber-900 to-orange-900 text-white">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-yellow-500 via-amber-500 to-orange-500 text-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

@@ -201,10 +201,10 @@ const Footer = () => {
 
                 <div className="text-left">
                   <p className="text-gray-300 mb-3 text-sm leading-relaxed">
-                    Transforming raw land into premium residential plots with 25+ years of expertise in ethical real estate development.
+                    Celebrating excellence with 25+ years of experience in crafting unforgettable events, inspiring media productions, and prestigious award ceremonies.
                   </p>
                   <p className="text-gray-300 mb-3 text-sm leading-relaxed">
-                    Creating sustainable, Vastu-compliant plotted communities with complete legal transparency.
+                   Creating impactful, world-class experiences with creativity, professionalism, and complete commitment to transparency and quality.
                   </p>
                 </div>
               </div>
