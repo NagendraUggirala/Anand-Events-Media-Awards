@@ -169,8 +169,7 @@ const ContactAdvancedWithMapBottom = () => {
                 Let's <span className="text-amber-300">Connect</span>
               </h1>
               <p className="text-base md:text-lg text-blue-100 mb-4 leading-relaxed">
-                Ready to find your dream property? Our team is here to guide you
-                every step of the way.
+                 Planning a grand event, media production, or awards night? Our team at Anand Events, Media & Awards is here to collaborate with you and bring your vision to life with precision and creativity.
               </p>
             </motion.div>
 
@@ -220,8 +219,7 @@ const ContactAdvancedWithMapBottom = () => {
                       Get In Touch
                     </h2>
                     <p className="text-slate-600 mb-6 text-sm leading-relaxed">
-                      Have questions about properties or need guidance? We're
-                      here to help you find your perfect home.
+                      Whether it&apos;s a film launch, corporate show, public event, media project, or awards ceremony, our experts are here to guide you with end-to-end planning and flawless execution.
                     </p>
 
                     <div className="space-y-4 mb-6">
@@ -277,9 +275,7 @@ const ContactAdvancedWithMapBottom = () => {
                           Send Us a Message
                         </h2>
                         <p className="text-slate-600 text-sm md:text-base max-w-2xl">
-                          Fill out the form below with your requirements and
-                          we'll get back to you within 24 hours with
-                          personalized property recommendations.
+                           Share your event, media, or awards requirements, and our team will get back to you within 24 hours with personalized concepts, options, and next steps.
                         </p>
                       </div>
                     </div>
@@ -311,8 +307,7 @@ const ContactAdvancedWithMapBottom = () => {
                               Message Sent Successfully!
                             </h4>
                             <p className="text-emerald-600 text-xs md:text-sm">
-                              We'll contact you shortly with property options.
-                            </p>
+Our team will connect with you shortly to discuss your event, media, or awards collaboration.                            </p>
                           </div>
                         </div>
                       </motion.div>
@@ -433,7 +428,7 @@ const ContactAdvancedWithMapBottom = () => {
                                   ? "border-rose-400"
                                   : "border-slate-300"
                               } rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-300 resize-none text-sm md:text-base`}
-                              placeholder="Tell us about your specific requirements, preferred locations, amenities, and any other details that will help us find your perfect property..."
+                              placeholder="Tell us about your event, media project, or awards idea — type of event, expected audience, dates, venue (if any), budget range, and any special requirements..."
                             />
                             <div className="flex justify-between items-center mt-2">
                               {touched.message && errors.message ? (
@@ -442,8 +437,7 @@ const ContactAdvancedWithMapBottom = () => {
                                 </p>
                               ) : (
                                 <p className="text-slate-500 text-xs md:text-sm">
-                                  Please provide detailed information for
-                                  better assistance
+                                  Please provide detailed information so we can propose the best event and media solutions for you.
                                 </p>
                               )}
                               <p className="text-slate-400 text-xs md:text-sm">
@@ -520,8 +514,7 @@ const ContactAdvancedWithMapBottom = () => {
                 animate={{ opacity: 1, y: 0 }}
                 className="text-slate-600 text-sm max-w-2xl mx-auto"
               >
-                Find us easily for personalized consultation and site visits
-              </motion.p>
+Meet our creative and production team in person to plan your next event, media production, or awards ceremony with complete clarity and confidence.              </motion.p>
             </div>
 
             <div className="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
@@ -602,11 +595,10 @@ const ContactAdvancedWithMapBottom = () => {
                 </svg>
               </div>
               <h3 className="text-lg font-bold text-slate-800 mb-2">
-                Thanks — we'll call you soon.
+  Thank you — our team will contact you soon.
               </h3>
               <p className="text-slate-600 text-sm mb-4">
-                One of our specialists will reach out to schedule a
-                consultation.
+                One of our Anand Events, Media & Awards specialists will reach out to understand your requirements and share the best possible plan.
               </p>
               <button
                 onClick={() => setShowModal(false)}

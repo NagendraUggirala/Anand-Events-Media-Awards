@@ -252,26 +252,7 @@ const MediaPage = () => {
         </div>
       </section>
 
-      {/* Category Filter */}
-      <section className="py-8 bg-gray-50 border-b sticky top-0 z-30 shadow-sm">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setActiveCategory(category.id)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                  activeCategory === category.id
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg transform scale-105'
-                    : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md'
-                }`}
-              >
-                {category.label}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* 2. Satellite Channel Section */}
       {(activeCategory === 'all' || activeCategory === 'satellite') && (
@@ -343,72 +324,47 @@ const MediaPage = () => {
         </section>
       )}
 
-      {/* 3. Podcast Series Section */}
-      {(activeCategory === 'all' || activeCategory === 'podcast') && (
-        <section className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-purple-50">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-                Podcast Series
-              </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-6"></div>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Our podcast series brings powerful voices and meaningful conversations that motivate listeners. 
-                From interviews with achievers to discussions on success, mental strength, and growth, 
-                we explore topics that matter.
-              </p>
-            </motion.div>
+     {/* 3. Podcast Series Section */}
+{(activeCategory === 'all' || activeCategory === 'podcast') && (
+  <section className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-purple-50">
+    <div className="container mx-auto px-4">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="text-center mb-12"
+      >
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          Podcast Series – Voices That Matter
+        </h2>
+        <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-6"></div>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-6">
+          Our podcast series brings together well-known achievers, bold visionaries, and everyday heroes whose stories inspire change. 
+          Through honest conversations and meaningful life lessons, we shine a spotlight on those shaping the world in their own unique ways.
+        </p>
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mb-6">
+          Each episode dives deep into the journeys of dreamers and doers — exploring their successes, failures, mindset shifts, and defining moments. 
+          Whether you're seeking motivation, practical insights, or a dose of positive energy, these voices will help you see what’s possible.
+        </p>
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          Tune in to discover stories that challenge conventions, celebrate resilience, and remind us all to dream bigger and live better.
+        </p>
+      </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-              {podcastSeries.map((podcast, index) => (
-                <motion.div
-                  key={podcast.id}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.05 }}
-                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
-                >
-                  <div className="relative h-48 overflow-hidden">
-                    <img
-                      src={podcast.thumbnail}
-                      alt={podcast.guest}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                    <div className="absolute top-4 left-4 bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                      {podcast.episode}
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">{podcast.topic}</h3>
-                    <div className="flex items-center mb-3">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-400 to-pink-400 flex items-center justify-center text-white font-bold mr-3">
-                        {podcast.guest.charAt(0)}
-                      </div>
-                      <div>
-                        <div className="font-semibold text-gray-900 text-sm">{podcast.guest}</div>
-                        <div className="text-xs text-gray-600">{podcast.guestRole}</div>
-                      </div>
-                    </div>
-                    <p className="text-gray-600 text-sm mb-4 leading-relaxed">{podcast.description}</p>
-                    <button className="text-purple-600 hover:text-purple-800 font-semibold text-sm transition-colors duration-300 flex items-center">
-                      Listen Now →
-                    </button>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
+      {/* Optional: Add a CTA or episode preview buttons */}
+      <div className="text-center mt-10">
+        <a
+          href="#episodes"
+          className="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-1"
+        >
+          Explore Episodes
+        </a>
+      </div>
+    </div>
+  </section>
+)}
+
 
       {/* 4. Motivational & Social Impact Content */}
       {(activeCategory === 'all' || activeCategory === 'motivational') && (

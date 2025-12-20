@@ -135,34 +135,7 @@ const About = () => {
             transition={{ duration: 1 }}
             className="max-w-6xl mx-auto text-center text-white"
           >
-            {/* Main Sanskrit Quote */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="mb-8 md:mb-10"
-            >
-              <div className="inline-block bg-white/10 backdrop-blur-sm rounded-2xl p-4 md:p-8 border border-white/20 shadow-2xl mx-2">
-                {/* Sanskrit Text */}
-                <div className="text-2xl sm:text-3xl md:text-5xl font-bold text-yellow-300 mb-4 md:mb-5 font-sans leading-tight">
-                  धर्मो रक्षति रक्षितः
-                </div>
-
-                {/* Transliteration */}
-                <div className="text-base sm:text-lg md:text-2xl text-blue-100 italic mb-4 md:mb-5">
-                  "Dharmo Rakshati Rakshitah"
-                </div>
-
-                {/* Separator */}
-                <div className="w-16 h-1 bg-gradient-to-r from-yellow-400 to-orange-400 mx-auto rounded-full mb-4 md:mb-5"></div>
-
-                {/* Meaning */}
-                <div className="text-sm sm:text-base md:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed px-2">
-                  Where righteousness protects the protector, and ethical practices build lasting legacies.
-                </div>
-              </div>
-            </motion.div>
-
+            
             {/* Main Title - Smaller Size */}
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -170,7 +143,7 @@ const About = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-xl sm:text-2xl md:text-4xl font-bold mb-4 md:mb-6 text-blue-100"
             >
-              Our <span className="text-orange-300">Story</span>
+              About <span className="text-orange-300">US</span>
             </motion.h1>
 
             {/* Philosophy Explanation */}
@@ -181,8 +154,7 @@ const About = () => {
               className="max-w-4xl mx-auto"
             >
               <p className="text-sm sm:text-base md:text-lg text-blue-100 leading-relaxed px-2 sm:px-4">
-                For over two decades, we've built not just properties, but trust. Our journey is guided by
-                the timeless wisdom that when you protect Dharma (righteousness), Dharma protects you in return.
+                Our strong industry connections in film, entertainment, business, and healthcare enable us to deliver seamless experiences across 500+ events, 1000+ awards, and content reaching 50+ million viewers. We maintain competitive partnerships and flawless execution while ensuring every production inspires, connects, and creates lasting value for brands, creators, and audiences worldwide.
               </p>
             </motion.div>
           </motion.div>
@@ -497,21 +469,18 @@ const About = () => {
             {/* Points */}
             <div className="mt-4 space-y-4 text-sm sm:text-base">
               <div className="flex items-start gap-3">
-                <span className="mt-1 inline-flex h-2.5 w-2.5 flex-shrink-0 rounded-full bg-purple-700" />
                 <p className="leading-relaxed text-gray-800">
                   <span className="font-semibold">Empowering Talent</span> – Providing a stage for artists and creators to shine.
                 </p>
               </div>
 
               <div className="flex items-start gap-3">
-                <span className="mt-1 inline-flex h-2.5 w-2.5 flex-shrink-0 rounded-full bg-purple-700" />
                 <p className="leading-relaxed text-gray-800">
                   <span className="font-semibold">Encouraging Innovation</span> – Rewarding bold thinking and superior craftsmanship.
                 </p>
               </div>
 
               <div className="flex items-start gap-3">
-                <span className="mt-1 inline-flex h-2.5 w-2.5 flex-shrink-0 rounded-full bg-purple-700" />
                 <p className="leading-relaxed text-gray-800">
                   <span className="font-semibold">Inspiring Future Leaders</span> – Celebrating role models who inspire the next generation.
                 </p>

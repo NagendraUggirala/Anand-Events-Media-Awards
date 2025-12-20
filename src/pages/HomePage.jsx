@@ -283,7 +283,7 @@ const HomePage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* 1. Hero Section */}
-      <section 
+      <section
         ref={heroRef}
         className="relative min-h-[90vh] flex items-center justify-center  overflow-hidden"
       >
@@ -315,7 +315,7 @@ const HomePage = () => {
               className="absolute inset-0 w-full h-full object-cover"
             />
           </video>
-          
+
           {/* Fallback Image (shown if video fails or for image-only option) */}
           {/* Uncomment below and comment out video tag above to use image-only background */}
           {/* <div
@@ -324,7 +324,7 @@ const HomePage = () => {
               backgroundImage: `url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1920&q=80')`
             }}
           /> */}
-          
+
           {/* Overlay for better text readability - adjust opacity (0.7-0.9) as needed */}
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-purple-900/80 to-indigo-900/80"></div>
         </div>
@@ -428,35 +428,60 @@ const HomePage = () => {
               Who We Are
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto mb-8"></div>
+
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
-              Anand Events, Media & Awards is a premier platform dedicated to creating transformative experiences, 
-              producing impactful media content, and recognizing excellence across diverse industries.
+              Anand Events specializes in creating world-class experiences through professionally
+              curated entertainment and media-related events. Our expertise spans across the film
+              and entertainment industry, ensuring grand, seamless, and memorable productions.
             </p>
+
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
-              With a legacy of organizing 500+ events, presenting 1000+ awards, and reaching 50+ million viewers, 
-              we have established ourselves as a trusted name in event management, media production, and award recognition.
+              Anand Media is committed to creating meaningful, inspiring, and high-quality digital
+              content that influences society in a positive way. Our media division includes:
             </p>
+
+            <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
+              Anand Awards is an initiative dedicated to recognizing excellence across various
+              sectors. Our award ceremonies celebrate the hard work, dedication, innovation, and
+              success of individuals and organizations that create impact.
+            </p>
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+              {/* Mission */}
               <div className="p-6 bg-blue-50 rounded-xl">
                 <div className="mb-4 flex justify-center">
                   <Icon name="target" className="w-12 h-12 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Our Mission</h3>
-                <p className="text-gray-600">To inspire excellence and celebrate achievements through world-class events and media</p>
+                <p className="text-gray-600">
+                  To inspire excellence and create lasting impact by delivering world-class events, powerful media
+                  content, and credible award platforms that celebrate real stories, real talent, and real achievement.
+                </p>
               </div>
+
+              {/* Vision */}
               <div className="p-6 bg-purple-50 rounded-xl">
                 <div className="mb-4 flex justify-center">
                   <Icon name="star" className="w-12 h-12 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Our Vision</h3>
-                <p className="text-gray-600">To be the leading platform for events, media, and awards recognition globally</p>
+                <p className="text-gray-600">
+                  To be a globally recognized ecosystem for events, media, and awards that shapes culture, influences
+                  mindsets, and becomes the preferred platform for brands, creators, and changemakers worldwide.
+                </p>
               </div>
+
+              {/* Values */}
               <div className="p-6 bg-orange-50 rounded-xl">
                 <div className="mb-4 flex justify-center">
                   <Icon name="handshake" className="w-12 h-12 text-orange-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Our Values</h3>
-                <p className="text-gray-600">Excellence, integrity, innovation, and commitment to creating lasting impact</p>
+                <p className="text-gray-600">
+                  We stand for excellence in execution, integrity in recognition, innovation in storytelling, and a
+                  deep commitment to empowering individuals, businesses, and communities through meaningful
+                  experiences and platforms.
+                </p>
               </div>
             </div>
           </motion.div>
@@ -474,10 +499,12 @@ const HomePage = () => {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Our Event Categories
+              Anand Events – Where Moments Become Milestones
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              From film festivals to corporate galas, we create unforgettable experiences
+              At Anand Events, we turn ideas into extraordinary experiences. With a strong foothold in
+              the film and entertainment industry, we specialize in curating high-impact events that
+              blend creativity, technology, and flawless execution.
             </p>
           </motion.div>
 
@@ -530,11 +557,12 @@ const HomePage = () => {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Our Media Content
+              Anand Media – Inspiring Minds, Influencing Tomorrow
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Engaging content that reaches millions and creates lasting impact
-            </p>
+              Anand Media is more than a media house — it is a platform built to empower, educate,
+              and elevate society. Through meaningful storytelling and impactful content, we aim to
+              shape a healthier and more positive mindset in our audience.            </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-12">
@@ -606,10 +634,12 @@ const HomePage = () => {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Award Categories
+              Anand Awards – Honoring Brilliance, Empowering Legacy
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Recognizing excellence across diverse industries and achievements
+              The Anand Awards stands as a prestigious platform dedicated to recognizing
+              exceptional talent and excellence across diverse industries. Our award ceremonies are
+              synonymous with credibility, celebration, and class.
             </p>
           </motion.div>
 
@@ -653,75 +683,9 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* 6. Featured Events Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-blue-50 to-indigo-50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Featured Upcoming Events
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Don't miss these exciting events coming soon
-            </p>
-          </motion.div>
+     
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {featuredEvents.map((event, index) => (
-              <motion.div
-                key={event.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -10 }}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
-              >
-                <div className="relative h-56 overflow-hidden">
-                  <img
-                    src={event.image}
-                    alt={event.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                  <div className="absolute top-4 left-4 bg-yellow-500 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold">
-                    {event.category}
-                  </div>
-                  <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <h3 className="text-xl font-bold mb-1">{event.title}</h3>
-                    <div className="flex items-center text-sm text-white/90">
-                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                      </svg>
-                      <span className="mr-4">{event.date}</span>
-                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      </svg>
-                      <span>{event.location}</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <p className="text-gray-600 mb-4 leading-relaxed">{event.description}</p>
-                  <Link
-                    to="/events"
-                    className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors duration-300"
-                  >
-                    Learn More →
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 7. How We Work Section */}
+      {/* 6. How We Work Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
@@ -752,8 +716,7 @@ const HomePage = () => {
                 >
                   <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 h-full border-2 border-blue-100 hover:border-blue-300 transition-all duration-300">
                     <div className="flex items-center mb-4">
-                      <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg mr-4">
-                        {step.step}
+                      <div className="  flex items-center justify-center font-bold text-lg mr-4">
                       </div>
                       <div className="flex-1">
                         <Icon name={step.icon} className="w-8 h-8 text-blue-600" />
@@ -762,13 +725,7 @@ const HomePage = () => {
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
                     <p className="text-gray-600 leading-relaxed">{step.description}</p>
                   </div>
-                  {index < howWeWork.length - 1 && (
-                    <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
-                      <svg className="w-8 h-8 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </div>
-                  )}
+                 
                 </motion.div>
               ))}
             </div>
@@ -776,60 +733,8 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* 8. Recent News & Updates */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Latest News & Updates
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Stay informed with our latest announcements and updates
-            </p>
-          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {recentNews.map((news, index) => (
-              <motion.div
-                key={news.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer"
-              >
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={news.image}
-                    alt={news.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-gray-700">
-                    {news.category}
-                  </div>
-                </div>
-                <div className="p-6">
-                  <span className="text-sm text-gray-500 mb-2 block">{news.date}</span>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{news.title}</h3>
-                  <p className="text-gray-600 leading-relaxed mb-4">{news.excerpt}</p>
-                  <button className="text-blue-600 hover:text-blue-800 font-semibold transition-colors duration-300">
-                    Read More →
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 9. Our Services Section */}
+      {/* 8. Our Services Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
@@ -877,10 +782,10 @@ const HomePage = () => {
         </div>
       </section>
 
-      
-    
 
-      {/* 11. Testimonials & Achievements */}
+
+
+      {/* 9. Testimonials & Achievements */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           {/* Achievements Stats */}
@@ -942,9 +847,8 @@ const HomePage = () => {
                   <button
                     key={index}
                     onClick={() => setCurrentTestimonial(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                      index === currentTestimonial ? 'bg-blue-600 w-8' : 'bg-gray-300'
-                    }`}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial ? 'bg-blue-600 w-8' : 'bg-gray-300'
+                      }`}
                   />
                 ))}
               </div>
@@ -953,9 +857,9 @@ const HomePage = () => {
         </div>
       </section>
 
-    
-    
-      {/* 13. Final CTA Section */}
+
+
+      {/* 10. Final CTA Section */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-teal-400 via-pink-600 to-indigo-900 text-white">
         <div className="container mx-auto px-4">
           <motion.div
@@ -969,7 +873,7 @@ const HomePage = () => {
               Plan Your Next Event With Us
             </h2>
             <p className="text-xl md:text-2xl text-blue-100 mb-10 leading-relaxed">
-              Whether it's a film premiere, corporate gathering, award ceremony, or special occasion, 
+              Whether it's a film premiere, corporate gathering, award ceremony, or special occasion,
               we'll create an unforgettable experience that exceeds your expectations.
             </p>
             <Link
