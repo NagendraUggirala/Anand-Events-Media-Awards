@@ -181,11 +181,11 @@ const Footer = () => {
                         className="w-full h-full object-cover object-top"
                       />
                     </div>
-                    <div className="w-14 h-14">
+                     <div className="w-16 h-18 ">
                       <img
                         src="/images/Anandhlogo.png"
-                        alt="AnandEVENTSMEDIAAWARDS"
-                        className="w-full h-full object-contain"
+                        alt="Anand Imports & Exports"
+                        className="w-full h-full object-contain  rounded-full border-2  border-orange-200 "
                       />
                     </div>
                   </div>

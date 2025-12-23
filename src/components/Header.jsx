@@ -28,7 +28,7 @@ const Header = () => {
         <div className="flex justify-between items-center py-3 md:py-4">
           {/* Logo - Improved Mobile Alignment */}
           <Link to="/" className="flex items-center space-x-2 md:space-x-3 group">
-            <div className="w-12 h-12 md:w-16 md:h-16 rounded-full border-2 border-orange-200 overflow-hidden shadow-sm group-hover:shadow-md transition-all duration-300">
+            <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border-2 border-orange-200 overflow-hidden shadow-sm group-hover:shadow-md transition-all duration-300">
               <img
                 src="./images/image.png"
                 alt="Founder"
@@ -41,7 +41,7 @@ const Header = () => {
                 <img
                   src="./images/Anandhlogo.png"
                   alt="Anand Logo"
-                  className="w-8 h-10 md:w-10 md:h-12 object-contain"
+                  className="w-12 h-12 md:w-10 md:h-12 object-contain"
                 />
                 <div className="flex flex-col items-start">
                   <h1 className="text-lg md:text-xl font-bold text-blue-800">
