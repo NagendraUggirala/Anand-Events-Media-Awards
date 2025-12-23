@@ -534,7 +534,7 @@ const About = () => {
       </section>
 
       {/* CTA - Mobile Optimized */}
-      <section className="py-12 md:py-16 bg-gradient-to-r from-blue-800 to-blue-900 text-white">
+      <section className="py-12 md:py-16 bg-gradient-to-r from-pink-800 to-blue-900 text-white">
         <div className="container mx-auto px-4 sm:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

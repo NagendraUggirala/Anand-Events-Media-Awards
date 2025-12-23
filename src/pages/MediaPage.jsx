@@ -467,7 +467,7 @@ const MediaPage = () => {
       </section>
 
       {/* 6. Call to Action Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-orange-900 via-purple-900 to-indigo-900 text-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
