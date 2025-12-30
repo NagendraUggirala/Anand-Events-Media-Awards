@@ -44,8 +44,8 @@ const HomePage = () => {
     },
     {
       id: 3,
-      title: "Award Ceremonies",
-      description: "Prestigious recognition events honoring excellence across industries and achievements",
+      title: "Product Launches",
+      description: "Strategic product launch events that generates excitement and media attention ",
       icon: "trophy",
       image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800",
       link: "/awards"
@@ -753,7 +753,7 @@ const HomePage = () => {
     </motion.div>
 
     {/* Masonry Grid */}
-    <div className="columns-1 md:columns-2 lg:columns-3 gap-6 max-w-6xl mx-auto">
+    <div className="columns-1 md:columns-2 lg:columns-3 gap-6 max-w-6xl mx-auto text-gray-900">
       {mediaContent.slice(1).map((media, index) => (
         <motion.div
           key={media.id}
@@ -763,7 +763,7 @@ const HomePage = () => {
           viewport={{ once: true }}
           className="mb-6 break-inside-avoid"
         >
-          <div className="bg-gray-800 backdrop-blur-sm rounded-xl overflow-hidden hover:bg-gray-800 transition-all duration-300 border border-gray-700/50 group">
+          <div className="bg-white backdrop-blur-sm rounded-xl overflow-hidden transition-all duration-300 border border-gray-700/50 group">
             <div className="relative">
               <img
                 src={media.thumbnail}
@@ -779,23 +779,17 @@ const HomePage = () => {
                   {media.type}
                 </span>
               </div>
-              <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg">
-                  <svg className="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-              </div>
+              
             </div>
             <div className="p-5">
               <div className="flex items-center justify-between mb-3">
-                <span className="text-purple-400 text-sm font-medium">{media.category}</span>
-                <span className="text-gray-500 text-xs">12:45</span>
+                <span className="text-purple-700 text-sm font-medium">{media.category}</span>
+                <span className="text-gray-600 text-xs">12:45</span>
               </div>
-              <h3 className="text-lg font-bold text-white mb-2 line-clamp-2 group-hover:text-purple-300 transition-colors duration-300">
+              <h3 className="text-lg font-bold text-black mb-2 line-clamp-2 group-hover:text-purple-300 transition-colors duration-300">
                 {media.title}
               </h3>
-              <p className="text-gray-400 text-sm mb-4 line-clamp-2">
+              <p className="text-gray-700 text-sm mb-4 line-clamp-2">
                 {media.description}
               </p>
               <div className="flex items-center justify-between pt-3 border-t border-gray-700/50">
@@ -803,7 +797,7 @@ const HomePage = () => {
                   <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white text-xs font-bold">
                     AM
                   </div>
-                  <span className="text-gray-300 text-sm">Anand Media</span>
+                  <span className="text-gray-700 text-sm">Anand Media</span>
                 </div>
                 <span className="text-gray-500 text-sm">▶</span>
               </div>
@@ -1038,82 +1032,59 @@ const HomePage = () => {
       </section> */}
 
 
-      {/* How We Work - Diagonal Slant Layout */}
-<section className="py-16 md:py-24 bg-gradient-to-br from-white to-blue-50 relative overflow-hidden">
-  {/* Background decorative elements */}
-  <div className="absolute top-0 right-0 w-64 h-64 bg-blue-100 rounded-full -translate-y-32 translate-x-32 opacity-50"></div>
-  <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-100 rounded-full translate-y-40 -translate-x-40 opacity-30"></div>
-  
-  <div className="container mx-auto px-4 relative z-10">
+<section className="py-16 md:py-6 bg-blue-50 relative overflow-hidden">
+  <div className="container mx-auto px-4">
+
+    {/* Heading */}
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
+      transition={{ duration: 0.6 }}
       viewport={{ once: true }}
-      className="text-center mb-16"
+      className="text-center mb-20"
     >
-      {/* Enhanced header with decorative lines */}
-      <div className="inline-flex items-center mb-6">
-        <div className="w-12 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mr-4"></div>
-        <span className="text-blue-600 font-semibold uppercase tracking-wider text-sm">
-          Our Process
-        </span>
-        <div className="w-12 h-1 bg-gradient-to-r from-purple-500 to-blue-500 ml-4"></div>
-      </div>
-      
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-        How We Work
+      <h2 className="text-3xl md:text-4xl font-bold text-blue-700">
+        How we work
       </h2>
-      <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-        Our proven process ensures exceptional results every time
-      </p>
     </motion.div>
 
-    <div className="max-w-6xl mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    {/* Timeline */}
+    <div className="relative max-w-6xl mx-auto">
+
+      {/* Horizontal Line */}
+      <div className="hidden lg:block absolute top-12 left-0 right-0 h-[2px] bg-gray-300"></div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 text-center relative">
+
         {howWeWork.map((step, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
+            transition={{ duration: 0.6, delay: index * 0.15 }}
             viewport={{ once: true }}
-            whileHover={{ 
-              y: -15,
-              scale: 1.05
-            }}
             className="relative"
           >
-            {/* Diagonal background effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl transform rotate-1 scale-105 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
-            
-            <div className="relative bg-white rounded-xl p-8 h-full shadow-xl hover:shadow-2xl border border-gray-100 transition-all duration-300 group">
-              {/* Step number with icon */}
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mr-4">
-                    <span className="text-white font-bold">{index + 1}</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900">{step.title}</h3>
-                </div>
-                <Icon 
-                  name={step.icon} 
-                  className="w-10 h-10 text-blue-600 group-hover:text-purple-600 transition-colors duration-300" 
-                />
-              </div>
-              
-              {/* Content with animated border */}
-              <div className="relative">
-                <p className="text-gray-600 leading-relaxed mb-6">{step.description}</p>
-                
-                {/* Animated bottom border */}
-                <div className="h-1 w-0 group-hover:w-full bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-700 rounded-full"></div>
-              </div>
-              
-              
+            {/* Icon Circle */}
+            <div className="mx-auto mb-6 w-20 h-20 rounded-full bg-yellow-400 flex items-center justify-center shadow-md relative z-10">
+              <Icon
+                name={step.icon}
+                className="w-8 h-8 text-blue-900"
+              />
             </div>
+
+            {/* Title */}
+            <h3 className="text-lg font-bold text-gray-900 mb-3">
+              {step.title}
+            </h3>
+
+            {/* Description */}
+            <p className="text-gray-600 text-sm leading-relaxed max-w-xs mx-auto">
+              {step.description}
+            </p>
           </motion.div>
         ))}
+
       </div>
     </div>
   </div>

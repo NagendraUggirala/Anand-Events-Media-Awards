@@ -26,7 +26,7 @@ const EventsPage = () => {
       title: "Pre-release & Post-release Events",
       description: "Comprehensive event management for movie premieres and post-release celebrations",
       icon: "theater",
-      image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDpH8H0SGnvCxBMQRvomcecqBCPuOnwyJEjA&s",
       features: ["Red Carpet Events", "Premiere Screenings", "After-Parties", "Media Interactions"]
     },
     {
@@ -42,7 +42,7 @@ const EventsPage = () => {
       title: "Celebrity Appearances",
       description: "Exclusive celebrity events, fan meets, and star-studded gatherings",
       icon: "star",
-      image: "https://images.unsplash.com/photo-1478147427282-58a87a120781?w=800",
+      image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZXZlbnR8ZW58MHx8MHx8fDA%3D",
       features: ["Fan Meets", "Autograph Sessions", "Photo Opportunities", "Exclusive Access"]
     }
   ];
@@ -53,7 +53,7 @@ const EventsPage = () => {
       title: "New Year Eve Celebrations",
       description: "Unforgettable New Year celebrations with live entertainment, fireworks, and premium experiences",
       icon: "firework",
-      image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800",
+      image: "https://media.istockphoto.com/id/1184561549/photo/fireworks.webp?a=1&b=1&s=612x612&w=0&k=20&c=n0HZgXll4754KHQSSVhefvrzSZXEsTba4zffws3Fox4=",
       features: ["Live Entertainment", "Fireworks Display", "Premium Venues", "Gourmet Dining"]
     },
     {
@@ -69,7 +69,7 @@ const EventsPage = () => {
       title: "Cultural Festivals",
       description: "Vibrant cultural festivals celebrating traditions, arts, and community heritage",
       icon: "art",
-      image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi2I3TUBAK-Oc9C3uNLKB-sVsu3-cb5ixOVA&s",
       features: ["Traditional Performances", "Art Exhibitions", "Cultural Shows", "Community Engagement"]
     },
     {
@@ -77,7 +77,7 @@ const EventsPage = () => {
       title: "Large Brand Events",
       description: "Premium brand events that create lasting impressions and strengthen brand identity",
       icon: "trophy",
-      image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq5yksm5X2ohUIUpM7o6r3JQARdyUTKmYilA&s",
       features: ["Brand Activation", "Product Showcases", "Influencer Partnerships", "Media Amplification"]
     }
   ];
@@ -88,7 +88,7 @@ const EventsPage = () => {
       title: "Product Launches",
       description: "Strategic product launch events that generate excitement and media attention",
       icon: "rocket",
-      image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiTtaBbYFK9ZPLCOotsFi-NCsRRXqUQ58CMg&s",
       features: ["Strategic Planning", "Media Coverage", "Demo Sessions", "Networking"]
     },
     {
@@ -96,7 +96,7 @@ const EventsPage = () => {
       title: "Corporate Shows",
       description: "Professional corporate events including conferences, seminars, and annual gatherings",
       icon: "briefcase",
-      image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlpijvv32upaF_vg9Sqqhq2QWf3yeibj6eOw&s",
       features: ["Conference Management", "Speaker Sessions", "Networking Events", "Branding"]
     },
     {
@@ -104,7 +104,7 @@ const EventsPage = () => {
       title: "Business Promotions",
       description: "Engaging promotional events that drive business growth and customer engagement",
       icon: "chart",
-      image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO6JYHlSziC4KN1T-k14hL3xcfm_8Z8HqQOA&s",
       features: ["Marketing Campaigns", "Customer Engagement", "Brand Awareness", "Lead Generation"]
     },
     {
@@ -112,7 +112,7 @@ const EventsPage = () => {
       title: "Press Conferences",
       description: "Professional press conferences with comprehensive media management and coverage",
       icon: "newspaper",
-      image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLGZqKlWmv0sosSY1qh_G26K7Nqp2GtbTNpw&s",
       features: ["Media Management", "Press Kits", "Live Streaming", "Q&A Sessions"]
     }
   ];
@@ -402,7 +402,7 @@ const EventsPage = () => {
       </section>
 
       {/* 6. Call to Action */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
+      <section className="py-16 md:py-14 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

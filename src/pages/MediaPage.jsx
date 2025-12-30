@@ -11,7 +11,7 @@ const MediaPage = () => {
       id: 1,
       title: "Cultural Heritage Show",
       description: "Exploring rich cultural traditions, festivals, and heritage that define our society",
-      image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG7Mx93sKd55OWbYzkyt8dMqxHYZes7jCfeA&s",
       type: "Infotainment",
       features: ["Cultural Stories", "Traditional Values", "Heritage Preservation", "Community Engagement"]
     },
@@ -19,7 +19,7 @@ const MediaPage = () => {
       id: 2,
       title: "Inspiration Talks",
       description: "Powerful conversations with achievers, leaders, and visionaries sharing their journeys",
-      image: "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2em6Ftw2yri6StKX3tV0TUH7EAAZx71rFYA&s",
       type: "Talk Show",
       features: ["Success Stories", "Leadership Insights", "Life Lessons", "Motivational Content"]
     },
@@ -35,7 +35,7 @@ const MediaPage = () => {
       id: 4,
       title: "Entertainment Spotlight",
       description: "Cinematic entertainment content with purpose, featuring films, music, and arts",
-      image: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf4TuO7wn_cpAUFG0zpkwIKO7k61NjuBqnPQ&s",
       type: "Entertainment",
       features: ["Film Features", "Music Programs", "Arts & Culture", "Celebrity Interviews"]
     },
@@ -125,7 +125,7 @@ const MediaPage = () => {
       id: 1,
       title: "Daily Motivation",
       description: "Short, powerful messages to start your day with positivity and purpose",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800",
+      image: "https://images.pexels.com/photos/2821823/pexels-photo-2821823.jpeg",
       category: "Motivation",
       duration: "2-5 min"
     },
@@ -294,16 +294,7 @@ const MediaPage = () => {
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                    <div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      {program.type}
-                    </div>
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center group-hover:bg-white/30 transition-all">
-                        <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M8 5v14l11-7z" />
-                        </svg>
-                      </div>
-                    </div>
+                    
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{program.title}</h3>
@@ -340,11 +331,11 @@ const MediaPage = () => {
         </h2>
         <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-6"></div>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-6">
-          Our podcast series brings together well-known achievers, bold visionaries, and everyday heroes whose stories inspire change. 
+          Our podcast series brings together well-known achievers, bold visionaries, and Unsung heroes whose stories inspire change. 
           Through honest conversations and meaningful life lessons, we shine a spotlight on those shaping the world in their own unique ways.
         </p>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mb-6">
-          Each episode dives deep into the journeys of dreamers and doers — exploring their successes, failures, mindset shifts, and defining moments. 
+          Each episode dives deep into the journeys of dreamers who exploring their successes, failures, mindset shifts, and defining moments. 
           Whether you're seeking motivation, practical insights, or a dose of positive energy, these voices will help you see what’s possible.
         </p>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -406,12 +397,7 @@ const MediaPage = () => {
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                    <div className="absolute top-4 left-4 bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                      {content.category}
-                    </div>
-                    <div className="absolute bottom-4 right-4 bg-black/50 text-white px-2 py-1 rounded text-xs">
-                      {content.duration}
-                    </div>
+                    
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{content.title}</h3>
