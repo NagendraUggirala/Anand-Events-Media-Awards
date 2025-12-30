@@ -174,13 +174,7 @@ const Footer = () => {
                 <div className="flex items-center space-x-3 mb-4">
                   {/* Founder Image and Logo */}
                   <div className="flex items-center space-x-2 flex-shrink-0">
-                    <div className="w-16 h-16 rounded-full border-2 border-orange-200 overflow-hidden shadow-lg">
-                      <img
-                        src="/images/image.png"
-                        alt="Founder"
-                        className="w-full h-full object-cover object-top"
-                      />
-                    </div>
+                    
                      <div className="w-16 h-18 ">
                       <img
                         src="/images/Anandhlogo.png"
@@ -246,7 +240,7 @@ const Footer = () => {
 
                     <div className="flex items-center space-x-2">
                       <i className="fas fa-envelope text-orange-400 text-sm" />
-                      <span className="text-gray-300">info@anandeventsmediaawards.com</span>
+                      <span className="text-gray-300">info@anandgroup.org</span>
                     </div>
                   </div>
                 </div>

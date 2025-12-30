@@ -26,24 +26,24 @@ const HomePage = () => {
       image: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800",
       link: "/events"
     },
+    // {
+    //   id: 2,
+    //   title: "Special Occasions",
+    //   description: "Memorable celebrations, cultural events, and milestone gatherings crafted with precision and elegance",
+    //   icon: "celebration",
+    //   image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800",
+    //   link: "/events"
+    // },
     {
       id: 2,
-      title: "Special Occasions",
-      description: "Memorable celebrations, cultural events, and milestone gatherings crafted with precision and elegance",
-      icon: "celebration",
-      image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800",
-      link: "/events"
-    },
-    {
-      id: 3,
       title: "Corporate Shows",
       description: "Professional conferences, product launches, and corporate events that make lasting impressions",
       icon: "briefcase",
       image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800",
-      link: "/events"
+      link: "/media"
     },
     {
-      id: 4,
+      id: 3,
       title: "Award Ceremonies",
       description: "Prestigious recognition events honoring excellence across industries and achievements",
       icon: "trophy",
@@ -446,7 +446,7 @@ const HomePage = () => {
               success of individuals and organizations that create impact.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-12">
               {/* Mission */}
               <div className="p-6 bg-blue-50 rounded-xl">
                 <div className="mb-4 flex justify-center">
@@ -489,7 +489,7 @@ const HomePage = () => {
       </section>
 
       {/* 3. Events Highlights Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+      {/* <section className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -544,10 +544,80 @@ const HomePage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
+
+      {/* 3. Events Highlights Section - Unique Layout 1 */}
+<section className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
+  <div className="absolute top-0 right-0 w-64 h-64 bg-blue-100 rounded-full -translate-y-32 translate-x-32 opacity-50"></div>
+  <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-200 rounded-full translate-y-40 -translate-x-40 opacity-30"></div>
+  
+  <div className="container mx-auto px-4 relative z-10">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="text-center mb-12"
+    >
+      <div className="inline-block mb-6">
+        <span className="text-blue-600 font-semibold tracking-wider uppercase">Our Expertise</span>
+      </div>
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        Anand Events – Where Moments Become Milestones
+      </h2>
+      <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+        At Anand Events, we turn ideas into extraordinary experiences. With a strong foothold in
+        the film and entertainment industry.
+      </p>
+    </motion.div>
+
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      {eventCategories.map((event, index) => (
+        <motion.div
+          key={event.id}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: index * 0.2 }}
+          viewport={{ once: true }}
+          whileHover={{ scale: 1.05 }}
+          className="relative group"
+        >
+          <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl">
+            <img
+              src={event.image}
+              alt={event.title}
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+            <div className="absolute top-6 left-6">
+              <div className="w-14 h-14 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center">
+                <Icon name={event.icon} className="w-8 h-8 text-white" />
+              </div>
+            </div>
+            <div className="absolute bottom-0 left-0 right-0 p-8">
+              <h3 className="text-2xl font-bold text-white mb-3">{event.title}</h3>
+              <p className="text-gray-200 mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                {event.description}
+              </p>
+              <Link
+                to={event.link}
+                className="inline-flex items-center text-white font-semibold border-b-2 border-blue-400 pb-1 opacity-0 group-hover:opacity-100 transition-all duration-300"
+              >
+                Discover Events
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* 4. Media Section */}
-      <section className="py-16 md:py-24 bg-white">
+      {/* <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -621,10 +691,151 @@ const HomePage = () => {
             </Link>
           </motion.div>
         </div>
-      </section>
+      </section> */}
+
+      {/* 4. Media Section - Unique Layout 2 */}
+<section className="py-16 md:py-24 bg-gradient-to-b from-blue-100 to-blue-100 relative overflow-hidden">
+  {/* Background Video Placeholder */}
+  <div className="absolute inset-0 opacity-10">
+    <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-blue-900/20"></div>
+  </div>
+  
+  <div className="container mx-auto px-4 relative z-10">
+    <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+              Anand Media – Inspiring Minds, Influencing Tomorrow
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Anand Media is more than a media house, it is a platform built to empower, educate,
+              and elevate society. Through meaningful storytelling and impactful content, we aim to
+              shape a healthier and more positive mindset in our audience.            </p>
+          </motion.div>
+
+    {/* Featured Video Card - Large */}
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="mb-12"
+    >
+      <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
+        <img
+          src={mediaContent[0]?.thumbnail}
+          alt="Featured Content"
+          className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-700"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 p-8">
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center space-x-4">
+              <span className="bg-red-500 text-white px-4 py-1 rounded-full text-sm font-bold">
+                🔴 LIVE SOON
+              </span>
+              <span className="text-white/80 text-sm">Premiering Dec 25</span>
+            </div>
+            <button className="bg-white/20 backdrop-blur-md hover:bg-white/30 text-white w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+              <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </button>
+          </div>
+          <h3 className="text-3xl font-bold text-white mb-3">{mediaContent[0]?.title}</h3>
+          <p className="text-gray-300 max-w-2xl">{mediaContent[0]?.description}</p>
+        </div>
+      </div>
+    </motion.div>
+
+    {/* Masonry Grid */}
+    <div className="columns-1 md:columns-2 lg:columns-3 gap-6 max-w-6xl mx-auto">
+      {mediaContent.slice(1).map((media, index) => (
+        <motion.div
+          key={media.id}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+          viewport={{ once: true }}
+          className="mb-6 break-inside-avoid"
+        >
+          <div className="bg-gray-800 backdrop-blur-sm rounded-xl overflow-hidden hover:bg-gray-800 transition-all duration-300 border border-gray-700/50 group">
+            <div className="relative">
+              <img
+                src={media.thumbnail}
+                alt={media.title}
+                className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute top-4 left-4">
+                <span className={`px-3 py-1 rounded-full text-xs font-bold ${
+                  media.type === 'Video' ? 'bg-red-500/90 text-white' :
+                  media.type === 'Podcast' ? 'bg-blue-500/90 text-white' :
+                  'bg-green-500/90 text-white'
+                }`}>
+                  {media.type}
+                </span>
+              </div>
+              <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg">
+                  <svg className="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div className="p-5">
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-purple-400 text-sm font-medium">{media.category}</span>
+                <span className="text-gray-500 text-xs">12:45</span>
+              </div>
+              <h3 className="text-lg font-bold text-white mb-2 line-clamp-2 group-hover:text-purple-300 transition-colors duration-300">
+                {media.title}
+              </h3>
+              <p className="text-gray-400 text-sm mb-4 line-clamp-2">
+                {media.description}
+              </p>
+              <div className="flex items-center justify-between pt-3 border-t border-gray-700/50">
+                <div className="flex items-center space-x-2">
+                  <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white text-xs font-bold">
+                    AM
+                  </div>
+                  <span className="text-gray-300 text-sm">Anand Media</span>
+                </div>
+                <span className="text-gray-500 text-sm">▶</span>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+
+    {/* View All Button */}
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8, delay: 0.4 }}
+      viewport={{ once: true }}
+      className="text-center mt-12"
+    >
+      <Link
+        to="/media"
+        className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl group"
+      >
+        <span className="mr-3">Browse All Content</span>
+        <svg className="w-6 h-6 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </Link>
+    </motion.div>
+  </div>
+</section>
 
       {/* 5. Awards Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-yellow-50 via-orange-50 to-amber-50">
+      {/* <section className="py-16 md:py-24 bg-gradient-to-br from-yellow-50 via-orange-50 to-amber-50">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -681,12 +892,105 @@ const HomePage = () => {
             </Link>
           </motion.div>
         </div>
+      </section> */}
+
+      
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4 max-w-7xl">
+
+          {/* 🔑 IMPORTANT: items-center */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+
+            {/* LEFT IMAGE */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: true }}
+              className="flex justify-center"
+            >
+              <img
+                src="https://media.istockphoto.com/id/2062707205/photo/gold-star-on-a-blue-background-as-a-reward-top-performance-award-winners-cup-achievements.jpg?s=612x612&w=0&k=20&c=6HeaeFYryuuOyPTW8ucQKsUMUi3F8oHvE9CSPVgoV60="
+                alt="Anand Awards Ceremony"
+                className="w-full max-w-xl h-[360px] object-cover rounded-2xl shadow-xl"
+              />
+            </motion.div>
+
+            {/* RIGHT CONTENT */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+                Anand Awards
+              </h2>
+
+              <p className="italic text-lg text-gray-500 mb-5">
+                “Honoring Brilliance, Empowering Legacy”
+              </p>
+
+              <p className="text-lg text-gray-600 leading-relaxed mb-8 max-w-xl">
+                The Anand Awards is a prestigious platform dedicated to recognizing
+                extraordinary achievements across cinema, business, innovation,
+                and social impact. Each award celebrates excellence, integrity,
+                and lasting influence.
+              </p>
+
+              {/* FEATURE CARDS */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {awardCategories.map((award, index) => (
+                  <motion.div
+                    key={award.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.08 }}
+                    viewport={{ once: true }}
+                    className="bg-white border border-gray-100 rounded-xl p-5 shadow-sm hover:shadow-md transition"
+                  >
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-purple-100 text-purple-600">
+                        <Icon name={award.icon} className="w-5 h-5" />
+                      </div>
+                      <h3 className="font-semibold text-gray-900 text-sm md:text-base">
+                        {award.title}
+                      </h3>
+                    </div>
+
+                    <p className="text-sm text-gray-600 mb-2">
+                      {award.description}
+                    </p>
+
+                    <span className="text-xs font-semibold text-purple-600">
+                      {award.count}
+                    </span>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* CTA */}
+              <div className="mt-8">
+                <Link
+                  to="/awards"
+                  className="inline-flex items-center text-purple-600 font-semibold hover:underline"
+                >
+                  Explore All Awards →
+                </Link>
+              </div>
+            </motion.div>
+
+          </div>
+        </div>
       </section>
 
-     
+
+
+
+      
 
       {/* 6. How We Work Section */}
-      <section className="py-16 md:py-24 bg-white">
+      {/* <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -731,11 +1035,93 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+
+      {/* How We Work - Diagonal Slant Layout */}
+<section className="py-16 md:py-24 bg-gradient-to-br from-white to-blue-50 relative overflow-hidden">
+  {/* Background decorative elements */}
+  <div className="absolute top-0 right-0 w-64 h-64 bg-blue-100 rounded-full -translate-y-32 translate-x-32 opacity-50"></div>
+  <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-100 rounded-full translate-y-40 -translate-x-40 opacity-30"></div>
+  
+  <div className="container mx-auto px-4 relative z-10">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="text-center mb-16"
+    >
+      {/* Enhanced header with decorative lines */}
+      <div className="inline-flex items-center mb-6">
+        <div className="w-12 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mr-4"></div>
+        <span className="text-blue-600 font-semibold uppercase tracking-wider text-sm">
+          Our Process
+        </span>
+        <div className="w-12 h-1 bg-gradient-to-r from-purple-500 to-blue-500 ml-4"></div>
+      </div>
+      
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        How We Work
+      </h2>
+      <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+        Our proven process ensures exceptional results every time
+      </p>
+    </motion.div>
+
+    <div className="max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {howWeWork.map((step, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            whileHover={{ 
+              y: -15,
+              scale: 1.05
+            }}
+            className="relative"
+          >
+            {/* Diagonal background effect */}
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl transform rotate-1 scale-105 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+            
+            <div className="relative bg-white rounded-xl p-8 h-full shadow-xl hover:shadow-2xl border border-gray-100 transition-all duration-300 group">
+              {/* Step number with icon */}
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mr-4">
+                    <span className="text-white font-bold">{index + 1}</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">{step.title}</h3>
+                </div>
+                <Icon 
+                  name={step.icon} 
+                  className="w-10 h-10 text-blue-600 group-hover:text-purple-600 transition-colors duration-300" 
+                />
+              </div>
+              
+              {/* Content with animated border */}
+              <div className="relative">
+                <p className="text-gray-600 leading-relaxed mb-6">{step.description}</p>
+                
+                {/* Animated bottom border */}
+                <div className="h-1 w-0 group-hover:w-full bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-700 rounded-full"></div>
+              </div>
+              
+              
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
 
       {/* 8. Our Services Section */}
-      <section className="py-16 md:py-24 bg-white">
+      {/* <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -780,36 +1166,16 @@ const HomePage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
 
 
 
       {/* 9. Testimonials & Achievements */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-14 bg-white">
         <div className="container mx-auto px-4">
           {/* Achievements Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-6xl mx-auto"
-          >
-            {achievements.map((achievement, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl"
-              >
-                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">{achievement.number}</div>
-                <div className="text-gray-700 font-semibold">{achievement.label}</div>
-              </motion.div>
-            ))}
-          </motion.div>
+          
 
           {/* Testimonials */}
           <motion.div
@@ -860,7 +1226,7 @@ const HomePage = () => {
 
 
       {/* 10. Final CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-teal-400 via-pink-600 to-indigo-900 text-white">
+      <section className="py-16 md:py-14 bg-gradient-to-br from-sky-400 to-indigo-900 text-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
