@@ -19,12 +19,12 @@ const AwardsPage = () => {
         "Successful startups",
         "Outstanding business contributions"
       ],
-      image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800"
+      image: "./images/business.png"
     },
     {
       id: 2,
-      title: "Pharma & Healthcare",
-      description: "Celebrating achievements in medical science, compassionate service, and healthcare breakthroughs",
+      title: "Pharmacy and Healthcare",
+      description: "Celebrating advancements, breakthroughs, and service excellence in the medical and pharmaceutical world.",
       icon: "medical",
       color: "from-blue-400 to-cyan-500",
       bgColor: "bg-blue-50",
@@ -35,7 +35,7 @@ const AwardsPage = () => {
         "Outstanding service",
         "Community health impact"
       ],
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800"
+      image: "./images/pharma.png"
     },
     {
       id: 3,
@@ -51,7 +51,7 @@ const AwardsPage = () => {
         "Contributions to cinema and media",
         "Artistic achievements"
       ],
-      image: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800"
+      image: "./images/film.png"
     },
     {
       id: 4,
@@ -68,7 +68,7 @@ const AwardsPage = () => {
         "Change-makers",
         "Corporate leaders"
       ],
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800"
+      image: "./images/all.png"
     }
   ];
 
@@ -132,7 +132,7 @@ const AwardsPage = () => {
     {
       icon: "target",
       title: "Meaningful Impact",
-      description: "Beyond recognition — a movement inspiring excellence and celebrating impact"
+      description: "Beyond recognition a movement inspiring excellence and celebrating impact"
     }
   ];
 
@@ -182,7 +182,7 @@ const AwardsPage = () => {
       </section>
 
       {/* 2. Awards Purpose Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-yellow-50">
+      <section className="py-16 md:py-14 bg-gradient-to-br from-gray-50 to-yellow-50">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -227,7 +227,7 @@ const AwardsPage = () => {
       </section>
 
       {/* 3. Award Categories Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-14 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -259,9 +259,7 @@ const AwardsPage = () => {
                 <div className="md:flex">
                   <div className="md:w-2/5 h-48 md:h-auto bg-cover bg-center relative" style={{ backgroundImage: `url(${category.image})` }}>
                     <div className={`absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent`}></div>
-                    <div className="absolute top-4 left-4">
-                      <Icon name={category.icon} className="w-12 h-12 text-white" />
-                    </div>
+                    
                   </div>
                   <div className="md:w-3/5 p-6">
                     <h3 className="text-2xl font-bold text-gray-900 mb-3">{category.title}</h3>
@@ -289,7 +287,7 @@ const AwardsPage = () => {
       </section>
 
       {/* 4. Award Ceremony Highlights */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-blue-900 to-orange-500 text-white">
+      {/* <section className="py-16 md:py-24 bg-gradient-to-br from-blue-900 to-orange-500 text-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -337,7 +335,7 @@ const AwardsPage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* 5. Why Anand Awards? */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-yellow-50 via-orange-50 to-amber-50">
@@ -354,7 +352,7 @@ const AwardsPage = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto mb-6"></div>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Anand Awards goes beyond recognition — it is a movement inspiring excellence and celebrating 
+              Anand Awards goes beyond recognition it is a movement inspiring excellence and celebrating 
               meaningful impact. We provide a platform that truly honors achievement.
             </p>
           </motion.div>
@@ -382,7 +380,7 @@ const AwardsPage = () => {
       </section>
 
       {/* 6. Nomination / Participation Section */}
-      <section className="py-16 md:py-24 bg-white">
+      {/* <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -436,25 +434,25 @@ const AwardsPage = () => {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* 7. Closing CTA */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-yellow-500 via-amber-500 to-orange-500 text-white">
+      <section className="py-16 md:py-14 bg-gradient-to-br from-blue-700 via-cyan-700 to-violet-700 text-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center max-w-4xl mx-auto"
+            className="text-center max-w-5xl mx-auto"
           >
             <div className="mb-6 flex justify-center">
-              <Icon name="trophy" className="w-20 h-20 text-yellow-400" />
+              <Icon name="trophy" className="w-10 h-10 text-yellow-400" />
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
               Be a Part of the Celebration of Excellence
             </h2>
-            <p className="text-xl md:text-2xl text-yellow-100 mb-10 leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-300 mb-10 leading-relaxed">
               Join us in honoring those who make a difference. Whether you're nominating someone, 
               applying for recognition, or attending our ceremonies, be part of this prestigious celebration.
             </p>

@@ -967,7 +967,7 @@ const HomePage = () => {
               <div className="mt-8">
                 <Link
                   to="/awards"
-                  className="inline-flex items-center text-purple-600 font-semibold hover:underline"
+                  className="inline-flex items-center text-white font-semibold bg-gradient-to-r from-blue-500 to-violet-500 rounded-full border border-purple-600 px-8 py-3 transition-all duration-300 transform hover:scale-105 shadow-xl"
                 >
                   Explore All Awards →
                 </Link>
@@ -1043,7 +1043,7 @@ const HomePage = () => {
       viewport={{ once: true }}
       className="text-center mb-20"
     >
-      <h2 className="text-3xl md:text-4xl font-bold text-blue-700">
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
         How we work
       </h2>
     </motion.div>
@@ -1066,10 +1066,10 @@ const HomePage = () => {
             className="relative"
           >
             {/* Icon Circle */}
-            <div className="mx-auto mb-6 w-20 h-20 rounded-full bg-yellow-400 flex items-center justify-center shadow-md relative z-10">
+            <div className="mx-auto mb-7 w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shadow-md relative z-10">
               <Icon
                 name={step.icon}
-                className="w-8 h-8 text-blue-900"
+                className="w-8 h-8 text-white"
               />
             </div>
 

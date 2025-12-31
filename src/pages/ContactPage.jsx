@@ -141,7 +141,7 @@ const ContactAdvancedWithMapBottom = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* HERO SECTION WITH ENHANCED BACKGROUND */}
-      <section className="relative py-12 bg-gradient-to-br from-orange-500 via-orange-500 to-orange-600 overflow-hidden">
+      <section className="relative py-12 bg-gradient-to-br from-blue-500 via-violet-500 to-blue-600 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-0 w-96 h-96 bg-white/25 rounded-full mix-blend-overlay filter blur-3xl opacity-20 animate-pulse-slow"></div>
           <div className="absolute top-1/2 right-0 w-80 h-80 bg-cyan-400/30 rounded-full mix-blend-overlay filter blur-3xl opacity-25 animate-pulse-medium"></div>

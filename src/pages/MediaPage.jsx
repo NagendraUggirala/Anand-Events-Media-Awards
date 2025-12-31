@@ -43,7 +43,7 @@ const MediaPage = () => {
       id: 5,
       title: "Social Impact Stories",
       description: "Stories of change-makers and initiatives making a positive difference in society",
-      image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800",
+      image: "./images/social.png",
       type: "Documentary",
       features: ["Social Change", "Community Impact", "NGO Features", "Volunteer Stories"]
     },
@@ -51,7 +51,7 @@ const MediaPage = () => {
       id: 6,
       title: "Youth Empowerment",
       description: "Content focused on inspiring and empowering the next generation",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800",
+      image: "./images/youth.png",
       type: "Educational",
       features: ["Career Guidance", "Skill Development", "Mentorship", "Life Skills"]
     }
@@ -133,7 +133,7 @@ const MediaPage = () => {
       id: 2,
       title: "Success Mindset",
       description: "Content focused on developing a success-oriented mindset",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Imp2IjADWARuyKGUSJir-vwkreHpD9q_Mg&s",
       category: "Personal Development",
       duration: "10-15 min"
     },
@@ -141,7 +141,7 @@ const MediaPage = () => {
       id: 3,
       title: "Social Awareness",
       description: "Content that raises awareness about important social issues and solutions",
-      image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfRXyHtJNwNZxNhyFvPFq31iH1r4_M6hxffQ&s",
       category: "Social Impact",
       duration: "15-20 min"
     },
@@ -157,7 +157,7 @@ const MediaPage = () => {
       id: 5,
       title: "Career Growth",
       description: "Content designed to help professionals advance in their careers",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIn-DGqG2ucomXA7MiepQPASOurnQuKSDIw&s",
       category: "Professional Development",
       duration: "10-15 min"
     },
@@ -165,7 +165,7 @@ const MediaPage = () => {
       id: 6,
       title: "Youth Inspiration",
       description: "Specially curated content to inspire and guide the younger generation",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3VmpzpVw--rnGjuHag5tbFr6LLTdxW8bw2A&s",
       category: "Youth",
       duration: "8-12 min"
     }
@@ -411,7 +411,7 @@ const MediaPage = () => {
       )}
 
       {/* 5. Why Anand Media? */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-blue-50 to-purple-50">
+      {/* <section className="py-16 md:py-24 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -450,10 +450,10 @@ const MediaPage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* 6. Call to Action Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-orange-900 via-purple-900 to-indigo-900 text-white">
+      <section className="py-16 md:py-14 bg-gradient-to-br from-orange-900 via-purple-900 to-indigo-900 text-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

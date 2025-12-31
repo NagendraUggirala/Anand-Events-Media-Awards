@@ -220,9 +220,9 @@ const EventsPage = () => {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                  <div className="absolute top-4 left-4">
+                  {/* <div className="absolute top-4 left-4">
                     <Icon name={event.icon} className="w-12 h-12 text-white" />
-                  </div>
+                  </div> */}
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{event.title}</h3>
@@ -280,9 +280,9 @@ const EventsPage = () => {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                  <div className="absolute top-4 left-4">
+                  {/* <div className="absolute top-4 left-4">
                     <Icon name={event.icon} className="w-12 h-12 text-white" />
-                  </div>
+                  </div> */}
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{event.title}</h3>
@@ -335,9 +335,9 @@ const EventsPage = () => {
                 <div className="md:flex">
                   <div className="md:w-1/3 h-48 md:h-auto bg-cover bg-center" style={{ backgroundImage: `url(${event.image})` }}>
                     <div className="h-full bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
-                      <div className="flex justify-center">
+                      {/* <div className="flex justify-center">
                         <Icon name={event.icon} className="w-12 h-12 text-gray-700" />
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                   <div className="md:w-2/3 p-6">
@@ -359,47 +359,7 @@ const EventsPage = () => {
         </div>
       </section>
 
-      {/* 5. Why Choose Anand Events? */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-yellow-50 via-orange-50 to-amber-50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Why Choose Anand Events?
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              We bring creativity, technology, and excellence together to produce events that stand out. 
-              Our commitment to quality and attention to detail ensures every event is a success.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {whyChooseUs.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300"
-              >
-                <div className="mb-4 flex justify-center">
-                  <Icon name={item.icon} className="w-12 h-12 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">{item.title}</h3>
-                <p className="text-gray-600 text-center leading-relaxed">{item.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* 6. Call to Action */}
       <section className="py-16 md:py-14 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
